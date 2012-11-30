@@ -1,0 +1,9 @@
+Agrupados los commits por años:
+
+select year(date), month(date), count(*) from scmlog group by year(date), month(date) order by year(date), month(date)
+
+El commiter máximo:
+
+select l.committer_id, p.name, count(*) from scmlog l, people p where p.id = l.committer_id group by l.committer_id order by count(*) desc;
+
+

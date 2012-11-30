@@ -17,3 +17,6 @@
 
 # Filesystem
 *~
+
+# Database
+*.mysql

@@ -1,0 +1,189 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+
+\title{\textbf{Project Evaluation}}
+\subtitle{Define analysis metrics}
+\author{Daniel Izquierdo-Cortázar}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\newpage
+
+\tableofcontents
+
+\newpage
+
+\section{Introducción}
+
+Source Code Management.
+
+Necesidad de implantar un control de versiones en la empresa debido a la facilidad que aporta a nivel del trabajo en equipo liberándonos de la facilidad de perder información que conlleva el uso de un directorio compartido.
+
+Facilitando el trabajo en grupo impidiendo el intebloqueo y la pérdida de información.
+
+\subsection{Technical Reasons}
+
+Ricardo:
+\begin{itemize}
+    \item GUI Management Tools.
+    \item Integration with IDEs.
+    \item Mature and Stable versions.
+    \item Lower learning curve.
+    \item Success cases.
+    \item License.
+    \item Backup and restore.
+    \item Migration guide.
+    \item fork easily.
+\end{itemize}
+
+Jesús:
+\begin{itemize}
+    \item Web access
+    \item Low learning curve
+    \item User access policy/management
+    \item API.
+    \item Downloading specific parts of the source code tree
+    \item Non-technical users.
+\end{itemize}
+
+Johnattan:
+\begin{itemize}
+    \item Open source
+    \item Backup and restore.
+    \item Casos de éxito
+    \item Open access (web accoess)
+    \item Partially technical profiles (some of them translators)
+    \item Easy learning
+    \item Offline work
+\end{itemize}
+
+Ilias:
+\begin{itemize}
+    \item Multiplataforma
+    \item Usability
+    \item API (easy to hook from some BTS)
+    \item Documentation
+\end{itemize}
+
+Common:
+\begin{itemize}
+
+    \item Initial Analysis
+        \begin{itemize}
+            \item License.
+        \end{itemize}
+
+    \item Functionality
+        \begin{itemize}
+            \item UI 
+            \item Backup and restore (restore cost estimation or revert actions)
+            \item Profile management
+            \item Cheap forks
+        \end{itemize}
+
+    \item Usabilidad
+        \begin{itemize}
+            \item UI
+        \end{itemize}
+    
+    \item Robustness
+        \begin{itemize}
+            \item Multiplatform
+            \item Mature and stable version
+        \end{itemize}
+
+    \item Development
+        \begin{itemize}
+            \item API has two different clients:
+            \begin{itemize}
+                \item C: http://subversion.apache.org/docs/api/latest/ 
+                \item Java: http://subversion.apache.org/docs/javahl/latest/
+            \end{itemize}
+            \item Documentation
+        \end{itemize}
+
+\end{itemize}
+
+
+\subsection{Project's introduction}
+\subsection{DAFO (optional)}
+
+Si está soportado, hay una empresa detrás o una comunidad.
+
+\section{Methodology}
+
+Deadline 20-12-2012
+
+\subsection{Evaluation guidelines(quality models/ad hoc models)}
+\subsection{Toolset}
+\subsection{Data sources}
+
+\begin{itemize}
+    \item Website - http://subversion.apache.org/
+    \item Source code management system - svn co http://svn.apache.org/repos/asf/subversion/trunk subversion
+    \item Releases - http://subversion.apache.org/packages.html
+    \item Wikis - http://wiki.apache.org/subversion/
+    \item Documentation - http://subversion.apache.org/docs/
+    \item Mailing lists -http://subversion.apache.org/mailing-lists.html
+    \item Bug tracking system - http://subversion.tigris.org/issue-tracker.html
+    \item Irc channel - IRC on channel \#svn on irc.freenode.net
+\end{itemize}
+
+\subsection{Update Data Sources}
+
+Bash instructions:
+
+\begin{quote}
+    mysql -u root -padmin
+\end{quote}
+
+MySQL console:
+
+\begin{quote}
+    drop database svn\_scm\_log;
+    create database svn\_scm\_log;
+    exit
+\end{quote}
+
+Bash instructions:
+
+\begin{quote}
+    cd ~/projects/svn/subversion
+    svn co http://svn.apache.org/repos/asf/subversion/trunk subversion
+    cvsanaly2 --db-database svn\_scm\_log --db-user root --db-password admin --db-driver mysql
+    mysqldump -u root -padmin svn\_scm\_log > svn\_scm\_log.mysql
+\end{quote}
+
+\section{Analysis}
+
+Evaluación de las métricas elegidas.
+Deadline 04-01-2013
+
+\section{Results}
+
+Mostrar los resultados.
+
+\section{Conclusions}
+
+\section{Further work}
+
+Resumen, que posibilidades se han dejado fuera y futuribles.
+TODO: maillist, bugtracker, standards, foundation, uses, succed.
+
+\section{Deadlines}
+
+\begin{itemize}
+    \item 20th Dec - Methodology (evaluation guidelines)
+    \item 4th Jan - Analysis (to be shared with others)
+    \item 17th Jan - Final deadline.
+\end{itemize}
+
+\section{TODOs}
+
+Definir atributos principal y definición de las métricas.
+
+\end{document}
