@@ -20,3 +20,6 @@
 
 # Database
 *.mysql
+
+# Zipped files
+*.7z
