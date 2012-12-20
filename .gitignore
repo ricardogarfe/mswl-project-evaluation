@@ -23,3 +23,9 @@
 
 # Zipped files
 *.7z
+
+# Texlipse
+.project
+.texlipse
+bbdd-pedro/
+tmp/
