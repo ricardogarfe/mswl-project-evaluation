@@ -1,0 +1,141 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+\usecolortheme[named=Blue]{structure}
+\usetheme{Warsaw}
+\usepackage{beamerthemesplit}
+\usepackage{latexsym}
+\usepackage{eurosym}
+\usepackage{ae,aecompl}
+\usepackage{graphicx}
+\usepackage{amsfonts}
+\usepackage{tikz}
+
+\usetheme{Darmstadt}
+
+\title{Metrics for SCM Analysis}
+\centering\titlegraphic{\includegraphics[width=3.3in]{images/subversion_logo.png}}
+\author{Ricardo Garc\'ia Fern\'andez,\\
+        Project Evaluation,\\
+        Universidad Rey Juan Carlos I.}
+\date{\today}
+
+\begin{document}
+
+
+\frame{\titlepage
+\begin{flushright}
+{\tiny
+(cc) 2012 Ricardo Garc\'ia Fern\'andez\\
+    Este obra est\'a bajo una licencia de Creative Commons Reconocimiento 3.0 Unported.
+    To view a copy of full license, see http://creativecommons.org/licenses/by/3.0/
+}
+\end{flushright}
+}
+
+%% \usebackgroundtemplate{
+%%   \parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[width=5.5in]{logo_springsource_community.png}}
+%% }
+
+\section[Index]{}
+\begin{frame}[allowframebreaks]
+\tableofcontents
+\end{frame}
+
+\section{VCS}
+\begin{frame}[allowframebreaks]
+\frametitle{Version Control System}
+
+\textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyectol. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos.
+
+Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de las m\'etricas escogidas.
+
+\end{frame}
+
+\section{Subversion}
+\begin{frame}[allowframebreaks]
+\frametitle{Subversion}
+\textbf{Subversion}: es un Sistema de Control de Versiones de c\'odigo abierto.
+Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/}.
+Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software.
+\end{frame}
+
+\section{Metrics}
+\begin{frame}[allowframebreaks]
+\frametitle{Metrics}
+\begin{itemize}
+    \item \emph{Get Started}\footnote{http://www.springsource.org/get-started}
+    \item \emph{Get Involved}\footnote{http://www.springsource.org/get-involved}
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{OpenBRR Model}
+\begin{itemize}
+    \item \emph{Start a Tutorial} - Tutoriales de uso.
+    \item \emph{Grab a Code Sample} - Ejemplos funcionales.
+    \item \emph{Ask a Question (Forums)} - Foro, activo e importante.
+    \item \emph{Take a Class (Training)} - "Universidad" de Spring para aprender a codificar.
+    \item \emph{Read the Documentation} - Important\'isimo apartado, no s\'olo leer si no, saber utilizar la documentaci\'on.
+    \item \emph{Video Instruction} - V\'ideos en los que muestra las herramientas y su uso en funcionamiento.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Choosed Metrics}
+\begin{itemize}
+    \item \emph{Join the conversarion} - Informaci\'on del d\'ia a d\'ia.
+    \item \emph{Help other users (And get help when you need it too)} - Uso de los foros y otros canales.
+    \item \emph{Report issues} - Informa de errores o mejoras.
+    \item \emph{Track the latest features and test them out} - Uso activo del JIRA para poder probar las nuevas caracter\'isticas o posibles errores.
+    \item \emph{Contribute code} - Formar parte del grupo de usuarios que aportan c\'odigo a Spring Framework.
+    \item \emph{Attend (or give) a talk at a local user group} - Anima al desarrollador a ir a charlas sobre Spring o a ser el ponente de la misma charla en tus grupos cercanos de desarrolladores.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Weight \& Punctuation}
+\begin{itemize}
+    \item \emph{Join the conversarion} - Informaci\'on del d\'ia a d\'ia.
+    \item \emph{Help other users (And get help when you need it too)} - Uso de los foros y otros canales.
+    \item \emph{Report issues} - Informa de errores o mejoras.
+    \item \emph{Track the latest features and test them out} - Uso activo del JIRA para poder probar las nuevas caracter\'isticas o posibles errores.
+    \item \emph{Contribute code} - Formar parte del grupo de usuarios que aportan c\'odigo a Spring Framework.
+    \item \emph{Attend (or give) a talk at a local user group} - Anima al desarrollador a ir a charlas sobre Spring o a ser el ponente de la misma charla en tus grupos cercanos de desarrolladores.
+\end{itemize}
+\end{frame}
+
+\section{Tools}
+\begin{frame}[allowframebreaks]
+\frametitle{Pick up Information}
+Dise\~no de la comunicaci\'on dentro de la comunidad en el que intervienen todos los roles.
+\begin{itemize}
+    \item Usuario - Documentaci\'on - Foro - JIRA - Votaci\'on - Resoluci\'on.
+\end{itemize}
+\emph{Todo el proceso viene apoyado a trav\'es del seguimiento de la comunidad mediante su participaci\'on.}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+\frametitle{Tools}
+Dise\~no de la comunicaci\'on dentro de la comunidad en el que intervienen todos los roles.
+\begin{itemize}
+    \item Usuario - Documentaci\'on - Foro - JIRA - Votaci\'on - Resoluci\'on.
+\end{itemize}
+\emph{Todo el proceso viene apoyado a trav\'es del seguimiento de la comunidad mediante su participaci\'on.}
+\end{frame}
+
+\section{Bibliography}
+\begin{frame}[allowframebreaks]
+\frametitle{Bibliography}
+\begin{thebibliography}{9}
+
+\bibitem{subversion-site}
+  Subversion Tigris,\\
+  http://subversion.tigris.org/
+
+\bibitem{subversion-apache}
+  Subversion Apache,\\
+  http://subversion.apache.org/
+
+\end{thebibliography}
+\end{frame}
+
+\end{document}

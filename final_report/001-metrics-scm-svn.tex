@@ -1,0 +1,285 @@
+\documentclass[11pt]{scrartcl}
+\usepackage[parfill]{parskip}
+
+\title{\textbf{Metrics for SCM Analysis}}
+\subtitle{Project Evaluation}
+\author{Ricardo Garc\'ia Fern\'andez}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{VCS}
+
+\par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La informaci\'on queda reflejada en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos a los usuarios.
+
+\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de unas m\'etricas establecidas.
+
+\section{Subversion}
+
+\textbf{Subversion}: es un Sistema de Control de Versiones de c\'odigo abierto.
+Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/}.
+Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software y por parte del mundo privativo.
+
+\section{Metrics}
+
+M\'etricas: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable para el resultado del an\'alisis.
+
+\par Se ha de definir un conjuntod de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final. De esta manera, obtenemos un resultado num\'erico del proyecto que estamos analizando.
+
+\par Este resulado lo podemos comparar analizando otras soluciones existentes para nuestro problema.
+Las comparaciones se hacen con el resultado obtenido a partir de las mismas premisas para los diferentes Sistemas de Control de Versiones y así nos facilita la elecci\'on del m\'as adecuado mediante la representaci\'on de valores.
+
+\subsection{OpenBRR Model}
+
+\par Existen modelos de an\'alisis de proyectos establecidos. Como por ejemplo OpenBRR\footnote{http://www.openbrr.org/} en el que se ha basado este an\'alisis. 
+
+\par OpenBRR nace como un proyecto de unificaci\'on de m\'etricas para los proyectos de Software. Este modelo se considera libre ya que est\'a orientado a los proyectos de Sofware Libre (FLOSS). Naci\'o en el a\~no 2005 con ese fin pero, como en su p\'agina web se indica, no ha llegado a crear una gran comunidad alrededor.
+
+\par Otorga la libertad a la hora de puntuar cada m\'etrica mediante una puntaci\'on de \textbf{1 a 5}. Cada secci\'on est\'a divida para ser m\'as espec\'ica en sub-m\'etricas. Despu\'es se otorga un peso espec\'ifico a cada una y de esta forma, dando mayor peso a lo que se considera importante por parte del usuario del modelo, genera un resultado adecuado para el an\'alisis.
+
+\par El peso de las m\'etricas ofrece un resultado m\'as personalizado al usuario y por lo tanto m\'as cercano y manejable. Como ejemplo, si la m\'etrica de documentaci\'on tiene un peso de 50\% a diferencia de la m\'etrica relacionada con la seguridad con un 10\%, estamos buscando un Software en el que la documentaci\'on es la parte m\'as importante para nuestro proyecto y por lo tanto despu\'es de la recolecci\'on de datos elegiremos seguramente la que haya obtenido una puntuaci\'on m\'as alta con respecto a la documentaci\'on. Es un ejemplo a grandes rasgos pero bastante claro.
+
+\subsection{Choosed Metrics}
+
+\par Se han elegido un conjunto de m\'etricas para representar los valores m\'as importantes relacionados con la gesti\'on de los archivos. Este conjunto es espec\'ifico para evaluar Software por lo que podemos reutilizar la mayor\'ia de m\'etricas obtenidas para otro tipo de proyectos de Software.
+
+\par A partir del modelo \emph{OpenBRR} se han a\~nadido algunas m\'etricas nuevas y eliminado otras para así crear el modelo espec\'fico para nuestro caso.
+
+\begin{enumerate}
+    \item Initial Analysis
+    \begin{itemize}
+        \item License (Apache License, Version 2.0)
+        \begin{itemize} 
+            \item Private - \textbf{No}
+            \item Free Software: Non standard (My own license)
+            \item Free Software: \textbf{Standard} (included in list of most used FLOSS Licences)
+            \item Dual Licensing: \textbf{No}
+            \item Compatible with others - \textbf{Yes}: The result is a license that is supposed to be compatible with other open source licenses, while remaining true to the original goals of the Apache Group and supportive of collaborative development across both nonprofit and commercial organizations. The Apache Software Foundation is still trying to determine if this version of the Apache License is compatible with the GPL.\footnote{http://www.apache.org/licenses/GPL-compatibility.html}    
+        \end{itemize}
+	    \item Time for setup and installing to create a public/private repository II
+        \begin{itemize}
+            \item \textgreater
+ 4 hours
+            \item 1-4 
+            \item 30 min - 1 hour
+            \item \textbf{10 - 30} - Install and publish the repository with \textbf{Apache} or \textbf{svnserve}\footnote{http://svnbook.red-bean.com/en/1.7/svn.ref.svnserve.html}.
+            \item \textless
+ 10 minutes
+        \end{itemize}
+    \end{itemize}
+    \item Functionality
+        \begin{itemize}
+	    \item UI client
+            \begin{itemize}
+                \item Console client - Yes included.
+                \item OS file explorer integration - Collabnet Tortoise SVN - http://tortoisesvn.tigris.org/ GPL)
+                \item Graphic client - Tortoise SVN.
+                \item Specific plugin for tools - Eclipse Plugin by Tigris: Subclipse - http://subclipse.tigris.org/
+                \item Solution from the same company - Collabnet - http://www.usvn.info/ Cecill License (GPL Compatible)
+            \end{itemize}
+	    \item Backup and restore (restore costs estimation or revert actions) II
+            \begin{itemize}
+                \item Nothing - Not necessary.
+                \item Workaround solution - Not necessary.
+                \item Extra plugin - Not necessary
+                \item Included - Yes, has a tool to backup repository database included.
+                \item Easily Configurable - Backup from svn database using 'svnadmin dump' command total or incremental. Use 'svnadmin load' to restore backup version.
+            \end{itemize}
+
+	    \item Profile management 
+            \begin{itemize}
+                \item Workaround solution - Not necessary.
+                \item Integrated profile management - Users in subversion had access to every repository.
+                \item Directories - Profiles related to directory/user/groups access defined.
+                \item Groups/users/directories - Profiles related to directory/user/groups access defined.
+                \item Graphic Inteface tool - Tortoise, USVN, Eclipse Pluging.
+            \end{itemize}
+        \end{itemize}
+
+    \item Usability
+        \begin{itemize}
+	    \item UI client III
+        	\begin{itemize}
+                \item Internal (server management) - Using svnadmin command.
+                \item Included - It's included in the installation.
+                \item Extra plugin - Has extra plugin to apply this functionalities but not depends on it.
+                \item Web client - User-Friendly SVN\footnote{http://www.usvn.info/} promoted by Collabnet.
+            \end{itemize}
+
+	    \item Easy learning II
+        	\begin{itemize}
+                \item Too technical 
+                \item Early adoption - Is the most VCS used around the world of Software Development.
+                \item High learning curve - Yes, it's easy to get in touch and work.
+            \end{itemize}
+        \end{itemize}
+
+    \item Robustness
+
+        \begin{itemize}
+	    \item Mature and stable version - Yes.
+	        \begin{itemize}
+            \item Versions
+
+                \begin{tabular}{|l|l|l|l|}
+                    \hline
+	                    {\bf Version} & {\bf Date} & {\bf History} & {\bf Problems solved}\\
+                    \hline
+	                    1.7.x & October 11, 2011 & Fully supported & Fixes for all bugs\\
+                    \hline
+	                    1.6.x & March 20, 2009 & Partially supported & Only fixes for security issues and bugs which could cause data loss\\
+                    \hline
+	                    1.5.x & June 19, 2008 and earlier & No longer supported & No longer supported\\
+                    \hline
+                \end{tabular}
+
+            \end{itemize}
+
+	    \item Num. point/patch releases last year II
+	        \begin{itemize}
+                \item Number of releases is constant ? depends of the year ? Public roadmap for next versions\footnote{http://subversion.apache.org/roadmap.html}.
+                \item Patches in last year is constant ? Average: two months\footnote{http://subversion.apache.org/docs/release-notes/release-history.html}.
+
+                    \begin{tabular}{|l|l|l|}
+                        \hline Version & Date & Information\\
+                        \hline 1.7.8 & (Thursday, 20 December 2012) & Bugfix release.\\
+                        \hline 1.7.7 & (Tuesday, 9 October 2012) & Bugfix release.\\
+                        \hline 1.7.6 & (Wednesday, 15 August 2012) & Bugfix release.\\
+                        \hline 1.7.5 & (Thursday, 17 May 2012) & Bugfix/security release.\\
+                        \hline 1.7.4 & (Thursday, 8 March 2012) & Bugfix release.\\
+                        \hline 1.7.3 & (Monday, 13 February 2012) & Bugfix release.\\
+                        \hline
+                    \end{tabular}
+            \end{itemize}
+        \end{itemize}
+
+    \item Development 
+    \begin{itemize}
+	    \item API
+    	    \begin{itemize}
+                \item Project API in the same web - Client for Java and C.
+                \item Easy understanding - Easy understanding for Software Developers. 
+                \item Is it used in other projects not directly related? - Yes, from extra plugins, functionalities, integrated in aplications and forges.
+            \end{itemize}
+
+	    \item Documentation
+    	    \begin{itemize}
+                \item Online tutorials - Development
+                \item Offline tutorials - SVNBook\footnote{http://svnbook.red-bean.com/}
+                \item Hello World - Tutorial to initialize a Repository in 10 minutes.
+                \item Books from the author, authors or company -  SVNBook
+                \item Languages - Various Languages (Deutsch | English | français | Español | Italiano | 日本語 | norsk | Português | Русский | 中文)
+            \end{itemize}
+    \end{itemize}
+
+    \item Community
+    \begin{itemize}
+	    \item Avg commits per month, last six months.
+	        \begin{itemize}
+                \item Compare with other projects or \textbf{itself with other year results}. Comparision with six month and twelve earlier.
+                \item \textbf{Result}: Less work than a year before on total commits (-,-,-,-,-,+)
+            \end{itemize}
+	    \item Avg monthly volumen of general mailing lists during the last six months II
+	    \begin{itemize}
+            \item Compare with other projects or itself with other year results. Table from 2012:
+
+                \begin{tabular}{|l|l|l|l|l|l|}
+                    \hline
+            	    Jan (4.5M) & Feb (2.5M) & Mar (3.5M) & Apr (2.1M) & May (1.8M) & Jun (1.8M)\\
+                    \hline
+                    Jul (1.4M) & Aug (3.3M) & Sep (1.9M) & Oct (1.7M) & Nov (1.7M) & Dec (497K)\\
+                    \hline
+                \end{tabular}
+            \item Decreases (-,+,-,-,-,-).
+        \end{itemize}
+	    \item Developers that left the project and those that started to participate (last year) (and also for the core team)
+	    \begin{itemize}
+            \item Started to participate las year: \textbf{6}
+        \end{itemize}
+	    \item Knowledge concentration (territoriality) \textbf{TBC}
+	    \item Is still the original developer/team active nowadays? Yes, innactive.
+	    \begin{itemize}
+            \item How did affect the project ? commits avg continued normal ?
+            \item Yes, the core team continues in the project but not with the same weight. This not affects the repository because committs per month is constant.
+        \end{itemize}
+    \end{itemize}
+
+    \item Documentation
+    \begin{itemize}
+ 	    \item Several levels of documentation (user, development, translator, languages) III
+     	    \begin{itemize}
+                \item Online tutorials - Development
+                \item Offline tutorials - SVNBook
+                \item Hello World - Init a Repository in 10 minutes
+                \item Books from the author, authors or company - SVNBook
+                \item Languages - Various Languages (Deutsch | English | français | Espa\~nol | Italiano | Japanese | Noruego | Portugu\'es | Russo | Chinese)
+            \end{itemize}
+    \end{itemize}
+
+\end{enumerate}
+
+\subsection{Weight \& Punctuation}
+
+Despu\'es del an\'alisis de los requerimientos y puntuaci\'on de las m\'etricas se procede a dar un peso espec\'ifico a cada secci\'on definida en el documento. El peso otorgado es lo que da el valor final que busca el usuario para poder crear una resultado subjetivo a partir de una puntuaci\'on objetiva. Es decir, adecuar las necesidades de la empresa al producto que se est\'a analizando.
+
+Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
+
+    \begin{tabular}{|l|l|}
+        \hline Category & Weight\\
+        \hline Initial Analysis	 & 13,00\%\\
+        \hline Functionality & 12,00\%\\
+        \hline Usability & 14,00\%\\
+        \hline Robustness & 17,00\%\\
+        \hline Development & 15,00\%\\
+        \hline Community & 19,00\%\\
+        \hline Documentation & 10,00\%\\
+        \hline
+    \end{tabular}
+
+\par Se puede apreciar que el valor al que se da m\'as peso es la Community con un 19\%, seguido de Robustness con un 17\% y Development con un 15\%. 
+
+\subsubsection{Community, Robustness and Development}
+
+\par Podemos ver como destaca la \emph{Community} debido a que al ser un proyecto FLOSS dependemos en parte de la interacci\'on de la comunidad, de la salud de la misma. A simple vista parece que goza de buena salud debido a su historial pero en los \'ultimos a\~nos ha venido decreciendo el trabajo reflejado en la comunidad con respecto a las listas de email y los commits por mes. Tambi\'en se puede destacar el grupo de desarrolladores inicial no est\'a presente en el desarrollo actual de una manera activa pero esto no ha afectado al desarrollo. Se ha renovado el n\'ucleo de desarrolladores otorgando robustez al proyecto.
+
+\par Por parte de la \emph{Robustez} podemos extraer que se trata de un proyecto Robusto. Afirmamos esto despu\'es de observar el cuidado que hay en cada una de las versiones que ha ido publicando y el tratamiento que se da a las mismas. Mantiene una versi\'on anterior viva (1.6) \'unicamente por si existen errores de seguridad mientras que contin\'ua hacia adelante con la versi\'on actual (1.7) arreglando los errores y publicando cada parche con una media de dos meses.
+
+\par Con respecto al \emph{Desarrollo} vemos que la puntuaci\'on es buena ya que cuenta con distintas APIs (en varios lenguajes de programaci\'on C y Java) y se utiliza en proyectos externos por lo que es una pr\'actica extendida. Pero claro, has de saber programar para poder entender el API.
+La documentaci\'on incluida en la parte de desarrollo es muy extensa y clara. Dispone de diferentes ejemplos para inicializar repositorios y proyectos. Los manuales cuentan con ejemplos relacionados con cada opci\'on y la documentaci\'on es clara y concisa. Cuenta con un libro SVNBook en distintos idiomas que ayuda mucho a la toma de contacto con la herramienta aunque como ayuda offline no hay mucho m\'as que el comando \textbf{man} (la propia documentaci\'on del a herramienta), donde no existen buenos ejemplos de uso.
+
+\par En un segundo grupo podemos ver que aparecen Usability 14\%, Initial Analysis 13\% y Functionality 12\%.
+
+\subsubsection{Usability, Initial Analysis and Functionality}
+
+\par \emph{Usability}, en este caso nos referimos a la usabilidad relacionada con la interacci\'on entre el usuario y la herramienta. La configuraci\'on en un servidor es una parte destacada que podemos apreciar en el apartado interno \emph{UI Client}. Existen varias opciones v\'alidas para la gesti\'on del control de la herramienta. Por otra parte tambi\'en se observa que esta herramienta est\'a bastante extendida y tiene una curva de aprendizaje alta pero hay que contar con que has de ser una persona t\'ecnica para poder sacar provecho m\'as r\'apidamente de las funcionalidades que nos presenta Subversion.
+
+\par El apartado \emph{Initial Analysis} engloba dos valores importantes, la licencia con la que está publicado el Software y el tiempo que se tarda en lanzar el primer repositorio. Por parte de la licencia se trata de la Licencia Apache v2.0. Es una Licencia FLOSS 'estandar' que es compatible con la Licencia GPLv3. Esta licencia nos otorga pleno control sobre el c\'odigo y facilita los aportes a la distribuci\'on oficial por parte de terceros.
+El momento de la primera prueba es bastante cr\'itico por lo que a mi respecta. Vemos que en un margen de tiempo de 10 a 30 minutos se publica un repositorio Subversion para el acceso de usuarios. Este tiempo es un \'exito ya que el primer contacto es el m\'as importante y de no se pierde tiempo. Un repositorio online funcional de 10 a 30 minutos.
+
+\par En la categor\'ia \emph{Funcionality} la Interfaz de Usuario ocupa el lugar m\'as destacado con un 40\% de la puntuaci\'on. Las m\'ultiples opociones que ofrece Subversion para acceder a la gesti\'on del repositorio independientemente del nivel que tenga el usuario, hacen de esta herramienta que su acceso sea r\'apido y f\'acil para las distintas clases de usuarios que pueda encontrarse.
+Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser confirada f\'acilmente. 
+En el apartado de seguridad conocido como Profile management, vemos que la estructura de Subversion se divide en directorios, todo son directorios. Por lo que los permisos tambi\'en se otorgan a partir de directorios, grupos y usuarios. Es el cl\'asico sistema de permisos en el que nos ofrece una herramienta visual online USVN para que los no tan t\'ecnicos se despreocupen de configuraciones en el servidor y gestionen los grupos, usuarios y permisos sobre proyectos.
+
+\par Por \'ultimo la secci\'on de Documentation con un 10\%. Esta secci\'on tambi\'en est\'a incluida dentro de Development por lo que se valora mucho m\'as la documentaci\'on relacionada con el desarrollo de la herramienta que la documentaci\'on como tal.
+
+\subsubsection{Documentation}
+
+\par Esta secci\'on al haber sido definida y ponderada dentro del apartado \emph{Development}. En est\'a ha pesado menos en el an\'alisis total. Cabe destacar como hemos hecho anteriormente que cuenta con una muy buena documentaci\'on online para los servicios que ofrece la herramienta Subversion aunque falta algo m\'as de documentaci\'on offline.
+
+\section{Tools}
+
+\par Herramienta: es un instrumento que se utiliza para llevar a cabo un trabajo. En este caso la recolecci\'on de datos y el an\'alisis son el trabajo realizado.
+
+\par Para este an\'alisis se han utilizado varias herramientas para conseguir la informaci\'on necesaria.
+
+\begin{itemize}
+    \item Web de Subversion\footnote{http://subversion.tigris.org/} - Listas de correo, usuarios, repositorio, documentaci\'on, foros.
+    \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
+    \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
+    \item ohloh\footnote{http://www.ohloh.net/} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
+
+\end{itemize}
+
+\end{document}
