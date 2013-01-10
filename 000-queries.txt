@@ -77,7 +77,9 @@ Less work than a year before on total commits.
 # Committers per month and commits
 # select committer_id, count(*) from scmlog where year(date) = 2012 and month(date) = 1 group by committer_id order by count(*) desc;
 
-#  select year(date), month(date), committer_id, count(*) from scmlog where year(date) = 2012 group by year(date), month(date), committer_id order by year(date), month(date), count(*) desc;
+# select year(date), month(date), committer_id, count(*) from scmlog where year(date) = 2012 group by year(date), month(date), committer_id order by year(date), month(date), count(*) desc;
+
+# select committer_id, year(date), month(date), count(*) from scmlog where year(date) = 2012 group by committer_id, year(date), month(date) order by committer_id, year(date), month(date), count(*) desc;
 
 +------------+-------------+--------------+----------+
 | year(date) | month(date) | committer_id | count(*) |
@@ -397,4 +399,16 @@ select l.committer_id, p.name, count(*) from scmlog l, people p where year(date)
 |          167 | jorton      |        1 |
 |          168 | trent       |        1 |
 +--------------+-------------+----------+
+
+
+Territorialidad
+
+# select a.file_id, count(distinct(s.committer_id)) from actions a, scmlog s where a.commit_id=s.id group by a.file_id having count(distinct(s.committer_id))>100;
+
+# % de todos los ficheros, obtenerla para un año.
+
+# select a.file_id, count(distinct(s.committer_id)) from actions a, scmlog s where  year(s.date)=2012 and a.commit_id=s.id group by a.file_id having count(distinct(s.committer_id))=1;
+
+# Ficheros en un año natural.
+# select count(distinct(a.file_id)) from actions a, scmlog s where year(s.date)=2012 and a.commit_id=s.id;
 
