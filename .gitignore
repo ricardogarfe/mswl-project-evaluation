@@ -15,6 +15,9 @@
 *.snm
 *.toc
 
+# LibreOffice files
+.~*
+
 # Filesystem
 *~
 
