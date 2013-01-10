@@ -10,6 +10,10 @@
 
 \maketitle
 
+\tableofcontents
+
+\newpage
+
 \section{VCS}
 
 \par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La informaci\'on queda reflejada en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos a los usuarios.
@@ -26,16 +30,16 @@ Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de 
 
 M\'etricas: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable para el resultado del an\'alisis.
 
-\par Se ha de definir un conjuntod de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final. De esta manera, obtenemos un resultado num\'erico del proyecto que estamos analizando.
+\par Se ha de definir un conjunto de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final. De esta manera, obtenemos un resultado num\'erico del proyecto que estamos analizando.
 
-\par Este resulado lo podemos comparar analizando otras soluciones existentes para nuestro problema.
+\par Este resultado lo podemos comparar analizando otras soluciones existentes para nuestro problema.
 Las comparaciones se hacen con el resultado obtenido a partir de las mismas premisas para los diferentes Sistemas de Control de Versiones y así nos facilita la elecci\'on del m\'as adecuado mediante la representaci\'on de valores.
 
 \subsection{OpenBRR Model}
 
 \par Existen modelos de an\'alisis de proyectos establecidos. Como por ejemplo OpenBRR\footnote{http://www.openbrr.org/} en el que se ha basado este an\'alisis. 
 
-\par OpenBRR nace como un proyecto de unificaci\'on de m\'etricas para los proyectos de Software. Este modelo se considera libre ya que est\'a orientado a los proyectos de Sofware Libre (FLOSS). Naci\'o en el a\~no 2005 con ese fin pero, como en su p\'agina web se indica, no ha llegado a crear una gran comunidad alrededor.
+\par OpenBRR nace como un proyecto de unificaci\'on de m\'etricas para los proyectos de Software. Este modelo se considera libre ya que est\'a orientado a los proyectos de Software Libre (FLOSS). Naci\'o en el a\~no 2005 con ese fin pero, como en su p\'agina web se indica, no ha llegado a crear una gran comunidad alrededor.
 
 \par Otorga la libertad a la hora de puntuar cada m\'etrica mediante una puntaci\'on de \textbf{1 a 5}. Cada secci\'on est\'a divida para ser m\'as espec\'ica en sub-m\'etricas. Despu\'es se otorga un peso espec\'ifico a cada una y de esta forma, dando mayor peso a lo que se considera importante por parte del usuario del modelo, genera un resultado adecuado para el an\'alisis.
 
@@ -258,8 +262,8 @@ La documentaci\'on incluida en la parte de desarrollo es muy extensa y clara. Di
 \par El apartado \emph{Initial Analysis} engloba dos valores importantes, la licencia con la que está publicado el Software y el tiempo que se tarda en lanzar el primer repositorio. Por parte de la licencia se trata de la Licencia Apache v2.0. Es una Licencia FLOSS 'estandar' que es compatible con la Licencia GPLv3. Esta licencia nos otorga pleno control sobre el c\'odigo y facilita los aportes a la distribuci\'on oficial por parte de terceros.
 El momento de la primera prueba es bastante cr\'itico por lo que a mi respecta. Vemos que en un margen de tiempo de 10 a 30 minutos se publica un repositorio Subversion para el acceso de usuarios. Este tiempo es un \'exito ya que el primer contacto es el m\'as importante y de no se pierde tiempo. Un repositorio online funcional de 10 a 30 minutos.
 
-\par En la categor\'ia \emph{Funcionality} la Interfaz de Usuario ocupa el lugar m\'as destacado con un 40\% de la puntuaci\'on. Las m\'ultiples opociones que ofrece Subversion para acceder a la gesti\'on del repositorio independientemente del nivel que tenga el usuario, hacen de esta herramienta que su acceso sea r\'apido y f\'acil para las distintas clases de usuarios que pueda encontrarse.
-Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser confirada f\'acilmente. 
+\par En la categor\'ia \emph{Funcionality} la Interfaz de Usuario ocupa el lugar m\'as destacado con un 40\% de la puntuaci\'on. Las m\'ultiples opciones que ofrece Subversion para acceder a la gesti\'on del repositorio independientemente del nivel que tenga el usuario, hacen de esta herramienta que su acceso sea r\'apido y f\'acil para las distintas clases de usuarios que pueda encontrarse.
+Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser confirmada f\'acilmente.
 En el apartado de seguridad conocido como Profile management, vemos que la estructura de Subversion se divide en directorios, todo son directorios. Por lo que los permisos tambi\'en se otorgan a partir de directorios, grupos y usuarios. Es el cl\'asico sistema de permisos en el que nos ofrece una herramienta visual online USVN para que los no tan t\'ecnicos se despreocupen de configuraciones en el servidor y gestionen los grupos, usuarios y permisos sobre proyectos.
 
 \par Por \'ultimo la secci\'on de Documentation con un 10\%. Esta secci\'on tambi\'en est\'a incluida dentro de Development por lo que se valora mucho m\'as la documentaci\'on relacionada con el desarrollo de la herramienta que la documentaci\'on como tal.
@@ -281,5 +285,17 @@ En el apartado de seguridad conocido como Profile management, vemos que la estru
     \item ohloh\footnote{http://www.ohloh.net/} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
 
 \end{itemize}
+
+\begin{thebibliography}{9}
+
+\bibitem{subversion-site}
+  Subversion Tigris,\\
+  http://subversion.tigris.org/
+
+\bibitem{subversion-apache}
+  Subversion Apache,\\
+  http://subversion.apache.org/
+
+\end{thebibliography}
 
 \end{document}
