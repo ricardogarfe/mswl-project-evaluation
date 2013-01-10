@@ -1,0 +1,95 @@
+diff --git a/scripts/activity.py b/scripts/activity.py
+index 65889c6..8335436 100644
+--- a/scripts/activity.py
++++ b/scripts/activity.py
+@@ -36,7 +36,11 @@
+         'baseColor': '#ffffff',
+         'lineColor': '#444444'
+     },
+-    'colorScheme': 'blue',
++    'colorScheme': {
++            'args': {
++                'initialColor': 'blue',
++            },
++        },
+     'legend': {
+         'hide': True,
+     },
+diff --git a/scripts/commits-types.py b/scripts/commits-types.py
+index f2c8b99..19fbc71 100644
+--- a/scripts/commits-types.py
++++ b/scripts/commits-types.py
+@@ -23,7 +23,11 @@
+             'ticks': [dict(v=i, label=d[0]) for i, d in enumerate (data)]
+         }
+     },
+-    'colorScheme': 'blue',
++    'colorScheme': {
++            'args': {
++                'initialColor': 'blue',
++            },
++        },
+     'background': {
+         'baseColor': '#ffffff'
+     },
+diff --git a/scripts/fm3.py b/scripts/fm3.py
+index e31c11f..2ff5ee3 100644
+--- a/scripts/fm3.py
++++ b/scripts/fm3.py
+@@ -10,7 +10,11 @@
+ 
+     # General options for graphs
+     options = {
+-        'colorScheme': '#4a6dbc',
++        'colorScheme': {
++                'args': {
++                    'initialColor': 'blue',
++                },
++            },
+         'background': {
+             'chartColor': '#ffeeff',
+             'baseColor': '#ffffff',
+diff --git a/scripts/ltools.py b/scripts/ltools.py
+index e2bc740..ae0a8f6 100644
+--- a/scripts/ltools.py
++++ b/scripts/ltools.py
+@@ -13,7 +13,11 @@
+ 
+ # General options for graphs
+ global_options = {
+-    'colorScheme': '#4a6dbc',
++    'colorScheme': {
++            'args': {
++                'initialColor': 'blue',
++            },
++        },
+     'background': {
+         'chartColor': '#ffeeff',
+         'baseColor': '#ffffff',
+diff --git a/scripts/tops.py b/scripts/tops.py
+index 1aca1b3..1b13127 100644
+--- a/scripts/tops.py
++++ b/scripts/tops.py
+@@ -12,7 +12,12 @@
+ 
+ gfx = PychaGraph (PychaGraph.HORIZONTAL_BAR)
+ options = {
+-    'colorScheme': 'red',
++    'colorScheme': {
++            'name': 'gradient',
++            'args': {
++                'initialColor': 'red',
++            },
++        },
+     'background': {
+         'chartColor': '#ffeeff',
+         'baseColor': '#ffffff',
+@@ -37,7 +42,7 @@
+         
+ # Top committers
+ query = "select p.name, count(s.id) from scmlog s, people p " + \
+-        "where p.id = s.committer group by p.name order by 2 desc"
++        "where p.id = s.committer_id group by p.name order by 2 desc"
+ result = store.execute (query)
+ data = [item for item in result]
+ dataset = (("committers", [(i, l[1]) for i, l in enumerate (data)]),)
