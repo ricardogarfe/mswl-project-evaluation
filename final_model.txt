@@ -1,0 +1,111 @@
+Main Evaluation Attributes:
+
+Punctuation 1 to 5
+
+- Initial Analysis
+	+ License (Apache License, Version 2.0)
+        Private
+        Free Software * 
+            Non standard (My own license)
+            Standard (included in list of most used FLOSS Licences) * 
+                Permissive (Apache) *
+                Copyleft (GPL)
+        Dual Licensing
+        Compatible with others * - The result is a license that is supposed to be compatible with other open source licenses, while remaining true to the original goals of the Apache Group and supportive of collaborative development across both nonprofit and commercial organizations. The Apache Software Foundation is still trying to determine if this version of the Apache License is compatible with the GPL.
+
+	+ Time for setup and installing to create a public/private repository II
+        > 4 hours
+        1-4 
+        30 min - 1 hour
+        10 - 30 * Install and publish the repository with apache and svnserve.
+        < 10 minutes
+
+- Functionality
+	+ UI client
+        Console client * 
+        OS file explorer integration * Collabnet Tortoise SVN - http://tortoisesvn.tigris.org/ GPL)
+        Graphic client * 
+        Specific plugin for tools * 
+        Solution from the same company * Collabnet - http://www.usvn.info/ Cecill License (GPL Compatible)
+
+	+ Backup and restore (restore costs estimation or revert actions) II
+        Nothing N
+        Workaround solution N
+        Extra plugin N
+        Included * 
+        Easily Configurable * Backup from svn database using 'svnadmin dump' command total or incremental. Use 'svnadmin load' to restore backup version.
+
+	+ Profile management 
+        Workaround solution N
+        Integrated profile management *
+        Directories * 
+        Groups/users/directories * 
+        Graphic Inteface tool * - User-Friendly SVN 
+
+- Usability
+	+ UI client III
+        Internal (server management) *
+        Included * 
+        Extra plugin (depends on other software)
+        Web client * User-Friendly SVN
+
+	+ Easy learning II
+        Too technical 
+        Early adoption * 
+        High learning curve * 
+        
+- Robustness
+	+ Mature and stable version II
+        Version Date                History and problems solved.
+        1.7.x	October 11, 2011    Fully supported	Fixes for all bugs
+        1.6.x	March 20, 2009      Partially supported	Only fixes for security issues and bugs which could cause data loss
+        1.5.x   June 19, 2008       and earlier	No longer supported
+
+	+ Num. point/patch releases last year II
+        Number of releases is constant ? depends of the year ?
+            * Has a public roadmap for next versions (http://subversion.apache.org/roadmap.html).
+        Patches in last year is constant ? Average: two months - (http://subversion.apache.org/docs/release-notes/release-history.html)
+            * Subversion 1.7.8 (Thursday, 20 December 2012): Bugfix release.
+            * Subversion 1.7.7 (Tuesday, 9 October 2012): Bugfix release.
+            * Subversion 1.7.6 (Wednesday, 15 August 2012): Bugfix release.
+            * Subversion 1.7.5 (Thursday, 17 May 2012): Bugfix/security release.
+            * Subversion 1.7.4 (Thursday, 8 March 2012): Bugfix release.
+            * Subversion 1.7.3 (Monday, 13 February 2012): Bugfix release.
+
+- Development 
+	+ API III
+        Project API in the same web * Client for Java and C.
+        Easy understanding * 
+        Is it used in other projects not directly related? *
+
+	+ Documentation 
+        Online tutorials * Development
+        Offline tutorials * SVNBook
+        Hello World * Init a Repository in 10 minutes
+        Books from the author, authors or company * SVNBook
+        Languages * Various Languages (Deutsch | English | français | Español | Italiano | 日本語 | norsk | Português | Русский | 中文)
+
+- Community
+	+ Avg commits per month, last six months III
+        Compare with other projects or itself with other year results.
+        * Less work than a year before on total commits (-,-,-,-,-,+)
+	+ Avg monthly volumen of general mailing lists during the last six months II
+        Compare with other projects or itself with other year results.
+    2012	Jan (4.5M)	Feb (2.5M)	Mar (3.5M)	Apr (2.1M)	May (1.8M)	Jun (1.8M)
+            Jul (1.4M)	Aug (3.3M)	Sep (1.9M)	Oct (1.7M)	Nov (1.7M)	Dec (497K)
+        * Decreases (-,+,-,-,-,-).
+	+ Developers that left the project and those that started to participate (last year) (and also for the core team) III
+        Started to participate las year: 6
+	+ Knowledge concentration (territoriality) II
+	+ Is still the original developer/team active nowadays? II
+        How did affect the project ? commits avg continued normal ?
+        Yes, the core team continues in the project but not with the same weight. This not affects the repository because committs per month is constant.
+
+- Documentation
+ 	+ Several levels of documentation (user, development, translator, languages) III
+        Online tutorials * Development
+        Offline tutorials * SVNBook
+        Hello World * Init a Repository in 10 minutes
+        Books from the author, authors or company * SVNBook
+        Languages * Various Languages (Deutsch | English | français | Español | Italiano | 日本語 | norsk | Português | Русский | 中文)
+

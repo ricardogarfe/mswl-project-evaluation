@@ -23,6 +23,7 @@
 
 # Database
 *.mysql
+*.sql
 
 # Zipped files
 *.7z
