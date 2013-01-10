@@ -31,10 +31,6 @@
 \end{flushright}
 }
 
-%% \usebackgroundtemplate{
-%%   \parbox[c][\paperheight][c]{\paperwidth}{\centering\includegraphics[width=5.5in]{logo_springsource_community.png}}
-%% }
-
 \section[Index]{}
 \begin{frame}[allowframebreaks]
 \tableofcontents
@@ -54,72 +50,77 @@ Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de 
 \begin{frame}[allowframebreaks]
 \frametitle{Subversion}
 \textbf{Subversion}: es un Sistema de Control de Versiones de c\'odigo abierto.
-Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/}.
-Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software.
+Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/} perteneciente a la fundaci\'on Apache.
+Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software y por parte del mundo privativo.
 \end{frame}
 
 \section{Metrics}
 \begin{frame}[allowframebreaks]
 \frametitle{Metrics}
-\begin{itemize}
-    \item \emph{Get Started}\footnote{http://www.springsource.org/get-started}
-    \item \emph{Get Involved}\footnote{http://www.springsource.org/get-involved}
-\end{itemize}
+\textbf{M\'etricas}: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable para el resultado del an\'alisis.
+
+\par Se ha de definir un conjunto de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final
 \end{frame}
 
 \begin{frame}[allowframebreaks]
 \frametitle{OpenBRR Model}
-\begin{itemize}
-    \item \emph{Start a Tutorial} - Tutoriales de uso.
-    \item \emph{Grab a Code Sample} - Ejemplos funcionales.
-    \item \emph{Ask a Question (Forums)} - Foro, activo e importante.
-    \item \emph{Take a Class (Training)} - "Universidad" de Spring para aprender a codificar.
-    \item \emph{Read the Documentation} - Important\'isimo apartado, no s\'olo leer si no, saber utilizar la documentaci\'on.
-    \item \emph{Video Instruction} - V\'ideos en los que muestra las herramientas y su uso en funcionamiento.
-\end{itemize}
+
+\textbf{OpenBRR} nace como un proyecto de unificaci\'on de m\'etricas para los proyectos de Software. Este modelo se considera libre ya que est\'a orientado a los proyectos de Software Libre (FLOSS). Naci\'o en el a\~no 2005 con ese fin pero, como en su p\'agina web se indica, no ha llegado a crear una gran comunidad alrededor.
+
 \end{frame}
 
 \begin{frame}[allowframebreaks]
 \frametitle{Choosed Metrics}
-\begin{itemize}
-    \item \emph{Join the conversarion} - Informaci\'on del d\'ia a d\'ia.
-    \item \emph{Help other users (And get help when you need it too)} - Uso de los foros y otros canales.
-    \item \emph{Report issues} - Informa de errores o mejoras.
-    \item \emph{Track the latest features and test them out} - Uso activo del JIRA para poder probar las nuevas caracter\'isticas o posibles errores.
-    \item \emph{Contribute code} - Formar parte del grupo de usuarios que aportan c\'odigo a Spring Framework.
-    \item \emph{Attend (or give) a talk at a local user group} - Anima al desarrollador a ir a charlas sobre Spring o a ser el ponente de la misma charla en tus grupos cercanos de desarrolladores.
-\end{itemize}
+
+Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m\'as importantes relacionados con la gesti\'on de los archivos. Dividido en varias categor\'ias:
+
+\begin{tabular}{|l|}
+    \hline {\bf Category}\\
+    \hline Initial Analysis\\
+    \hline Functionality\\
+    \hline Usability\\
+    \hline Robustness\\
+    \hline Development\\
+    \hline Community\\
+    \hline Documentation\\
+    \hline
+\end{tabular}
+
 \end{frame}
 
 \begin{frame}[allowframebreaks]
 \frametitle{Weight \& Punctuation}
-\begin{itemize}
-    \item \emph{Join the conversarion} - Informaci\'on del d\'ia a d\'ia.
-    \item \emph{Help other users (And get help when you need it too)} - Uso de los foros y otros canales.
-    \item \emph{Report issues} - Informa de errores o mejoras.
-    \item \emph{Track the latest features and test them out} - Uso activo del JIRA para poder probar las nuevas caracter\'isticas o posibles errores.
-    \item \emph{Contribute code} - Formar parte del grupo de usuarios que aportan c\'odigo a Spring Framework.
-    \item \emph{Attend (or give) a talk at a local user group} - Anima al desarrollador a ir a charlas sobre Spring o a ser el ponente de la misma charla en tus grupos cercanos de desarrolladores.
-\end{itemize}
+
+\par Despu\'es del an\'alisis de los requerimientos y puntuaci\'on de las m\'etricas se procede a dar un peso espec\'ifico a cada secci\'on definida en el documento. 
+
+\begin{tabular}{|l|l|}
+    \hline {\bf Category} & {\bf Weight}\\
+    \hline Initial Analysis	 & 13,00\%\\
+    \hline Functionality & 12,00\%\\
+    \hline Usability & 14,00\%\\
+    \hline Robustness & 17,00\%\\
+    \hline Development & 15,00\%\\
+    \hline Community & 19,00\%\\
+    \hline Documentation & 10,00\%\\
+    \hline
+\end{tabular}
+
 \end{frame}
 
 \section{Tools}
 \begin{frame}[allowframebreaks]
 \frametitle{Pick up Information}
-Dise\~no de la comunicaci\'on dentro de la comunidad en el que intervienen todos los roles.
-\begin{itemize}
-    \item Usuario - Documentaci\'on - Foro - JIRA - Votaci\'on - Resoluci\'on.
-\end{itemize}
-\emph{Todo el proceso viene apoyado a trav\'es del seguimiento de la comunidad mediante su participaci\'on.}
-\end{frame}
 
-\begin{frame}[allowframebreaks]
-\frametitle{Tools}
-Dise\~no de la comunicaci\'on dentro de la comunidad en el que intervienen todos los roles.
+\par Para este an\'alisis se han utilizado varias herramientas para conseguir la informaci\'on necesaria.
+
 \begin{itemize}
-    \item Usuario - Documentaci\'on - Foro - JIRA - Votaci\'on - Resoluci\'on.
+    \item Web de Subversion - Listas de correo, usuarios, repositorio, documentaci\'on, foros.
+    \item CVSAnaly - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
+    \item libcvsanaly2 - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
+    \item ohloh - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
+
 \end{itemize}
-\emph{Todo el proceso viene apoyado a trav\'es del seguimiento de la comunidad mediante su participaci\'on.}
+
 \end{frame}
 
 \section{Bibliography}
@@ -134,6 +135,18 @@ Dise\~no de la comunicaci\'on dentro de la comunidad en el que intervienen todos
 \bibitem{subversion-apache}
   Subversion Apache,\\
   http://subversion.apache.org/
+
+\bibitem{cvsanaly2}
+    CVSAnaly\\
+    https://github.com/MetricsGrimoire/CVSAnalY
+
+\bibitem{libcvsanaly2}
+    libcvsanaly2\\
+    http://git.libresoft.es/libcvsanaly2
+
+\bibitem{ohloh}
+    Ohloh.net\\
+    http://www.ohloh.net
 
 \end{thebibliography}
 \end{frame}
