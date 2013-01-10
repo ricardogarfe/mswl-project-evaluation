@@ -18,13 +18,13 @@
 
 \par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La informaci\'on queda reflejada en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos a los usuarios.
 
-\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de unas m\'etricas establecidas.
+\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de unas m\'etricas establecidas adaptadas a nuestros requerimientos.
 
 \section{Subversion}
 
 \textbf{Subversion}: es un Sistema de Control de Versiones de c\'odigo abierto. Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/} perteneciente a la fundaci\'on Apache.
 
-\par Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software y por parte del mundo privativo.
+\par Es el VCS m\'as utilizado en los proyectos relacionados con el desarrollo de software libre y por parte del mundo privativo.
 
 \section{Metrics}
 
@@ -33,7 +33,7 @@ M\'etricas: Son un conjunto de cualidades evaluables que aportan informaci\'on c
 \par Se ha de definir un conjunto de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final. De esta manera, obtenemos un resultado num\'erico del proyecto que estamos analizando.
 
 \par Este resultado lo podemos comparar analizando otras soluciones existentes para nuestro problema.
-Las comparaciones se hacen con el resultado obtenido a partir de las mismas premisas para los diferentes Sistemas de Control de Versiones y así nos facilita la elecci\'on del m\'as adecuado mediante la representaci\'on de valores.
+Las comparaciones se hacen con el resultado obtenido a partir de las mismas premisas para los diferentes Sistemas de Control de Versiones y as\'i nos facilita la elecci\'on del m\'as adecuado mediante la representaci\'on de valores.
 
 \subsection{OpenBRR Model}
 
@@ -49,7 +49,7 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
 
 \par Se han elegido un conjunto de m\'etricas para representar los valores m\'as importantes relacionados con la gesti\'on de los archivos. Este conjunto es espec\'ifico para evaluar Software por lo que podemos reutilizar la mayor\'ia de m\'etricas obtenidas para otro tipo de proyectos de Software.
 
-\par A partir del modelo \emph{OpenBRR} se han a\~nadido algunas m\'etricas nuevas y eliminado otras para así crear el modelo espec\'fico para nuestro caso.
+\par A partir del modelo \emph{OpenBRR} se han a\~nadido algunas m\'etricas nuevas y eliminado otras para as\'i crear el modelo espec\'fico para nuestro caso.
 
 \begin{enumerate}
     \item Initial Analysis
@@ -83,7 +83,7 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
                 \item Specific plugin for tools - Eclipse Plugin by Tigris: Subclipse - http://subclipse.tigris.org/
                 \item Solution from the same company - Collabnet - http://www.usvn.info/ Cecill License (GPL Compatible)
             \end{itemize}
-	    \item Backup and restore (restore costs estimation or revert actions) II
+	    \item Backup and restore (restore costs estimation or revert actions)
             \begin{itemize}
                 \item Nothing - Not necessary.
                 \item Workaround solution - Not necessary.
@@ -104,7 +104,7 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
 
     \item Usability
         \begin{itemize}
-	    \item UI client III
+	    \item UI client
         	\begin{itemize}
                 \item Internal (server management) - Using svnadmin command.
                 \item Included - It's included in the installation.
@@ -112,7 +112,7 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
                 \item Web client - User-Friendly SVN\footnote{http://www.usvn.info/} promoted by Collabnet.
             \end{itemize}
 
-	    \item Easy learning II
+	    \item Easy learning
         	\begin{itemize}
                 \item Too technical 
                 \item Early adoption - Is the most VCS used around the world of Software Development.
@@ -141,7 +141,7 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
 
             \end{itemize}
 
-	    \item Num. point/patch releases last year II
+	    \item Num. point/patch releases last year
 	        \begin{itemize}
                 \item Number of releases is constant ? depends of the year ? Public roadmap for next versions\footnote{http://subversion.apache.org/roadmap.html}.
                 \item Patches in last year is constant ? Average: two months\footnote{http://subversion.apache.org/docs/release-notes/release-history.html}.
@@ -246,9 +246,9 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
 
 \subsubsection{Community, Robustness and Development}
 
-\par Podemos ver como destaca la \emph{Community} debido a que al ser un proyecto FLOSS dependemos en parte de la interacci\'on de la comunidad, de la salud de la misma. A simple vista parece que goza de buena salud debido a su historial pero en los \'ultimos a\~nos ha venido decreciendo el trabajo reflejado en la comunidad con respecto a las listas de email y los commits por mes. Tambi\'en se puede destacar el grupo de desarrolladores inicial no est\'a presente en el desarrollo actual de una manera activa pero esto no ha afectado al desarrollo. Se ha renovado el n\'ucleo de desarrolladores otorgando robustez al proyecto.
+\par Podemos ver como destaca la \emph{Community} debido a que al ser un proyecto FLOSS dependemos en parte de la interacci\'on de la comunidad, es decir de la salud de la misma. A simple vista parece que goza de buena salud debido a su historial pero en los \'ultimos a\~nos ha venido decreciendo el trabajo reflejado en la comunidad con respecto a las listas de email y los commits por mes. Tambi\'en se puede destacar que el grupo de desarrolladores inicial no est\'a presente en el desarrollo actual de una manera activa pero esto no ha afectado al desarrollo. Se ha renovado el n\'ucleo de desarrolladores otorgando robustez al proyecto.
 
-\par Por parte de la \emph{Robustez} podemos extraer que se trata de un proyecto Robusto. Afirmamos esto despu\'es de observar el cuidado que hay en cada una de las versiones que ha ido publicando y el tratamiento que se da a las mismas. Mantiene una versi\'on anterior viva (1.6) \'unicamente por si existen errores de seguridad mientras que contin\'ua hacia adelante con la versi\'on actual (1.7) arreglando los errores y publicando cada parche con una media de dos meses.
+\par Por parte de la \emph{Robustez} podemos afirmar que se trata de un proyecto completo. Afirmamos esto despu\'es de observar el cuidado que hay en cada una de las versiones que ha ido publicando y el tratamiento que se da a las mismas. Mantiene una versi\'on anterior viva (1.6) \'unicamente por si existen errores de seguridad mientras que contin\'ua hacia adelante con la versi\'on actual (1.7) arreglando los errores y publicando cada parche con una media de dos meses.
 
 \par Con respecto al \emph{Desarrollo} vemos que la puntuaci\'on es buena ya que cuenta con distintas APIs (en varios lenguajes de programaci\'on C y Java) y se utiliza en proyectos externos por lo que es una pr\'actica extendida. Pero claro, has de saber programar para poder entender el API.
 La documentaci\'on incluida en la parte de desarrollo es muy extensa y clara. Dispone de diferentes ejemplos para inicializar repositorios y proyectos. Los manuales cuentan con ejemplos relacionados con cada opci\'on y la documentaci\'on es clara y concisa. Cuenta con un libro SVNBook en distintos idiomas que ayuda mucho a la toma de contacto con la herramienta aunque como ayuda offline no hay mucho m\'as que el comando \textbf{man} (la propia documentaci\'on del a herramienta), donde no existen buenos ejemplos de uso.
@@ -259,18 +259,18 @@ La documentaci\'on incluida en la parte de desarrollo es muy extensa y clara. Di
 
 \par \emph{Usability}, en este caso nos referimos a la usabilidad relacionada con la interacci\'on entre el usuario y la herramienta. La configuraci\'on en un servidor es una parte destacada que podemos apreciar en el apartado interno \emph{UI Client}. Existen varias opciones v\'alidas para la gesti\'on del control de la herramienta. Por otra parte tambi\'en se observa que esta herramienta est\'a bastante extendida y tiene una curva de aprendizaje alta pero hay que contar con que has de ser una persona t\'ecnica para poder sacar provecho m\'as r\'apidamente de las funcionalidades que nos presenta Subversion.
 
-\par El apartado \emph{Initial Analysis} engloba dos valores importantes, la licencia con la que está publicado el Software y el tiempo que se tarda en lanzar el primer repositorio. Por parte de la licencia se trata de la Licencia Apache v2.0. Es una Licencia FLOSS 'estandar' que es compatible con la Licencia GPLv3. Esta licencia nos otorga pleno control sobre el c\'odigo y facilita los aportes a la distribuci\'on oficial por parte de terceros.
-El momento de la primera prueba es bastante cr\'itico por lo que a mi respecta. Vemos que en un margen de tiempo de 10 a 30 minutos se publica un repositorio Subversion para el acceso de usuarios. Este tiempo es un \'exito ya que el primer contacto es el m\'as importante y de no se pierde tiempo. Un repositorio online funcional de 10 a 30 minutos.
+\par El apartado \emph{Initial Analysis} engloba dos valores importantes, la licencia con la que est\'a publicado el Software y el tiempo que se tarda en lanzar el primer repositorio. Por parte de la licencia se trata de la Licencia Apache v2.0. Es una Licencia FLOSS 'estandar' que es compatible con la Licencia GPLv3. La Licencia Apache v2.0 nos otorga pleno control sobre el c\'odigo y facilita los aportes a la distribuci\'on oficial por parte de terceros.
+El momento de la primera prueba es bastante cr\'itico por lo que a mi respecta. Vemos que en un margen de tiempo de 10 a 30 minutos se publica un repositorio Subversion para el acceso de usuarios. Este tiempo es un \'exito ya que el primer contacto es el m\'as importante y no se pierde tiempo. Un repositorio online funcional de 10 a 30 minutos.
 
 \par En la categor\'ia \emph{Funcionality} la Interfaz de Usuario ocupa el lugar m\'as destacado con un 40\% de la puntuaci\'on. Las m\'ultiples opciones que ofrece Subversion para acceder a la gesti\'on del repositorio independientemente del nivel que tenga el usuario, hacen de esta herramienta que su acceso sea r\'apido y f\'acil para las distintas clases de usuarios que pueda encontrarse.
-Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser confirmada f\'acilmente.
+Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser configurada f\'acilmente.
 En el apartado de seguridad conocido como Profile management, vemos que la estructura de Subversion se divide en directorios, todo son directorios. Por lo que los permisos tambi\'en se otorgan a partir de directorios, grupos y usuarios. Es el cl\'asico sistema de permisos en el que nos ofrece una herramienta visual online USVN para que los no tan t\'ecnicos se despreocupen de configuraciones en el servidor y gestionen los grupos, usuarios y permisos sobre proyectos.
 
 \par Por \'ultimo la secci\'on de Documentation con un 10\%. Esta secci\'on tambi\'en est\'a incluida dentro de Development por lo que se valora mucho m\'as la documentaci\'on relacionada con el desarrollo de la herramienta que la documentaci\'on como tal.
 
 \subsubsection{Documentation}
 
-\par Esta secci\'on al haber sido definida y ponderada dentro del apartado \emph{Development}. En est\'a ha pesado menos en el an\'alisis total. Cabe destacar como hemos hecho anteriormente que cuenta con una muy buena documentaci\'on online para los servicios que ofrece la herramienta Subversion aunque falta algo m\'as de documentaci\'on offline.
+\par Esta secci\'on ha pesado menos en el an\'alisis total. Cabe destacar como hemos hecho anteriormente que cuenta con una muy buena documentaci\'on online para los servicios que ofrece la herramienta Subversion aunque falta algo m\'as de documentaci\'on offline.
 
 \section{Tools}
 
