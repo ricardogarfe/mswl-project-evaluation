@@ -40,7 +40,7 @@
 \begin{frame}[allowframebreaks]
 \frametitle{Version Control System}
 
-\textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyectol. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos.
+\textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover a través de una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos.
 
 \end{frame}
 
@@ -49,13 +49,13 @@
 \frametitle{Subversion}
 \textbf{Subversion}: es un Sistema de Control de Versiones de c\'odigo abierto.
 Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/} perteneciente a la fundaci\'on Apache.
-Es el VCS m\'as utilizado en los proyectos de relacionados con el desarrollo de software y por parte del mundo privativo.
+Es el VCS m\'as utilizado en los proyectos relacionados con el desarrollo de proyectos de software libre y proyectos privados.
 \end{frame}
 
 \section{Metrics}
 \begin{frame}[allowframebreaks]
 \frametitle{Metrics}
-\textbf{M\'etricas}: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable para el resultado del an\'alisis.
+\textbf{M\'etricas}: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable como resultado del an\'alisis.
 
 \par Se ha de definir un conjunto de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final
 \end{frame}
@@ -89,7 +89,7 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 \begin{frame}[allowframebreaks]
 \frametitle{Weight \& Punctuation}
 
-\par Despu\'es del an\'alisis de los requerimientos y puntuaci\'on de las m\'etricas se procede a dar un peso espec\'ifico a cada secci\'on definida en el documento. 
+\par Despu\'es del an\'alisis de los requerimientos y puntuaci\'on de las m\'etricas se procede a dar un peso espec\'ifico a cada secci\'on definida en el documento.
 
 \begin{tabular}{|l|l|}
     \hline {\bf Category} & {\bf Weight}\\
@@ -103,6 +103,8 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
     \hline
 \end{tabular}
 
+Veamos paso a paso el an\'alisis de las m\'etricas por orden de importancia con respecto al \% dedicado.
+
 \end{frame}
 
 \begin{frame}[allowframebreaks]
@@ -110,15 +112,17 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Community} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline Avg commits per month, last six months	 & 20,00\%\\
-    \hline Avg monthly volume of general mailing lists \\during the last six months & 15,00\%\\
-    \hline Developers that left the project and those\\ that started to participate (last year)\\ (and also for the  core team) & 15,00\%\\
-    \hline Knowledge concentration (territoriality) & 10,00\%\\
-    \hline Original developer/team & 40,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline Avg commits per month, last six months & 20,00\% & 2\\
+    \hline Avg monthly volume of general mailing lists \\during the last six months & 15,00\% & 2\\
+    \hline Developers that left the project and those\\ that started to participate (last year)\\ (and also for the  core team) & 15,00\% & 5\\
+    \hline Knowledge concentration (territoriality) & 10,00\% & 0\\
+    \hline Original developer/team & 40,00\% & 5\\
     \hline
 \end{tabular}
+
+Sumatorio de las puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on: 
 
 \end{frame}
 
@@ -127,12 +131,14 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Robustness} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline Mature and stable version & 70,00\%\\
-    \hline Num. point/patch releases last year & 30,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline Mature and stable version & 70,00\% & 5\\
+    \hline Num. point/patch releases last year & 3,2\%\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -141,12 +147,14 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Development} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline API	 & 55,00\%\\
-    \hline Several levels of documentation & 45,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline API	 & 55,00\% & 4,4\\
+    \hline Several levels of documentation & 45,00\% & 4,3\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -155,12 +163,14 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Usability} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline License	 & 30,00\%\\
-    \hline Time for setup & 70,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline UI client	 & 30,00\% & 4,6\\
+    \hline Easy learning & 70,00\% & 4,7\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -169,12 +179,14 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Initial Analysis} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline UI client	 & 30,00\%\\
-    \hline Easy learning & 70,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline License	 & 30,00\% & 4,2\\
+    \hline Time for setup & 70,00\% & 4\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -183,13 +195,15 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Functionality} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline End user UI experience & 40,00\%\\
-    \hline Backup and restore & 30,00\%\\
-    \hline Profile management & 30,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline End user UI experience & 40,00\% & 5\\
+    \hline Backup and restore & 30,00\% & 5\\
+    \hline Profile management & 30,00\% & 2,9\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -198,12 +212,13 @@ Se han elegido un \textbf{conjunto de m\'etricas} para representar los valores m
 
 \par \textbf{Documentation} se divide en las siguientes sub-m\'etricas.
 
-\begin{tabular}{|l|l|}
-    \hline {\bf Category} & {\bf Weight}\\
-    \hline API	 & 55,00\%\\
-    \hline Several levels of documentation & 45,00\%\\
+\begin{tabular}{|l|l|l|}
+    \hline {\bf Category} & {\bf Weight} & {\bf Punctuation}\\
+    \hline Several levels of documentation & 100,00\% & 4,15\\
     \hline
 \end{tabular}
+
+Puntuaciones de 1 a 5 ponderadas con respecto al \% que se otorga a cada secci\'on.
 
 \end{frame}
 
@@ -234,10 +249,10 @@ Podemos apreciar que el resultado obtenido es una puntuaci\'on de \textbf{4,2 so
 \par Para este an\'alisis se han utilizado varias herramientas para conseguir la informaci\'on necesaria.
 
 \begin{itemize}
-    \item Web de Subversion - Listas de correo, usuarios, repositorio, documentaci\'on, foros.
-    \item CVSAnaly - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
-    \item libcvsanaly2 - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
-    \item ohloh - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
+    \item \emph{Web de Subversion} - Listas de correo, usuarios, repositorio, documentaci\'on, foros.
+    \item \emph{CVSAnaly} - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
+    \item \emph{libcvsanaly2} - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
+    \item \emph{ohloh} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
 
 \end{itemize}
 
