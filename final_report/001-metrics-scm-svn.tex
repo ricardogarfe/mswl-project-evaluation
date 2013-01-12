@@ -42,19 +42,27 @@ In this analysis we will begin the search for a VCS to suit our requirements.
 
 \section{VCS}
 
-\par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gestión de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La información queda reflejada en una base de datos, creando un histórico y ofreciendo una gestión ágil de los recursos a los usuarios.
+\par \textbf{VCS}: Version Control System. A Version Control System is a tool for managing files and its life cycle within a project. Manages all actions performed on them, create, save, copy, delete, move. The information is reflected in a database, and providing historical creating a dynamic management of resources to users.
 
-\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el análisis de unas métricas establecidas adaptadas a nuestros requerimientos.
+\par We will integrate a Version Control System to work in our software development company by analyzing a set metric tailored to our requirements.
 
 \subsection{Subversion: SVN}
 
-\textbf{Subversion}\footnote{http://subversion.tigris.org/}: is a FLOSS\footnote{Free Libre Open Source Software} Version Control System. It was created in 2000 by the company Collabnet belonging to the Apache Foundation.
+\textbf{Subversion}\footnote{http://subversion.tigris.org/}: is a FLOSS\footnote{Free Libre Open Source Software}\label{fn:floss} Centralized Version Control System. It was created in 2000 by the company Collabnet belonging to the Apache Foundation.
 
 \par SVN is the VCS most used in FLOSS\footnote{http://www.ohloh.net/repositories/compare} and private proyects as a Source Code Management (SCM) tool
 
 \subsection{Git}
 
+\textbf{Git}\footnote{http://git-scm.com/}: is a FLOSS Distributed Version Control System focused on branching methods.
+
+\par Git was initially designed and developed by Linus Torvalds\footnote{https://plus.google.com/+LinusTorvalds/about} for Linux\footnote{http://www.linuxfoundation.org/} kernel development.
+
 \subsection{CVS}
+
+\textbf{CVS}\footnote{http://subversion.tigris.org/}: Concurrent Versions System; is a version control system, an important component of Source Configuration Management (SCM). Is a FLOSS Centralized Version Control System.
+
+\par Dick Grune developed CVS as a series of shell scripts in July 1986\footnote{http://ximbiot.com/cvs/manual/cvs-1.12.12/cvs\_1.html}.
 
 \section{Requirements}
 
@@ -94,6 +102,8 @@ Comparisons are made with the results obtained from the same premises for differ
 \par The weight of the resulting metric provides personalized for the user and therefore nearest and manageable. For example: if the metric of documentation has a weight of 50 \% as opposed to security-related metrics with 10 \%, we are seeking a Software documentation which is the most important for our project and so both after data collection surely choose who has obtained the highest score with respect to documentation. It is an example roughly but quite clear. The weight is the most important because the final result depends on the value that we give to each section or metric. Thus we have an outcome directly related to our initial requirements.
 
 \par We adapted OpenBRR model using scoring one to five (without 0 value) for each defined metric thus give us a wide range of possibilities and scalability to match a good result.
+
+\par We found it difficult to find templates for OpenBRR model because the model state if mentioned in the previous paragraphs.
 
 \subsection{Metrics chosen}
 
@@ -218,8 +228,8 @@ We defined the weight given to each category in figure~\ref{fig:weight-metrics}.
 
             \begin{table}[H]
             \centering
-            \begin{tabular}{p{1cm} p{5cm} p{4cm}}
-                \hline Version & Date & Information\\
+            \begin{tabular}{p{1.5cm} p{5.25cm} p{4cm}}
+                \hline {\bf Version} & {\bf Date} & {\bf Information}\\
                 \hline 1.7.8 & (Thursday, 20 December 2012) & Bugfix release.\\
                 \hline 1.7.7 & (Tuesday, 9 October 2012) & Bugfix release.\\
                 \hline 1.7.6 & (Wednesday, 15 August 2012) & Bugfix release.\\
@@ -386,7 +396,7 @@ At first glance it is seen that in the overall score \textbf{stands SVN}. \emph{
 
 \par Although at first glance it seems that will fight to the death between SVN and Git.
 
-\subsubsection{Community, Robustness and Development}
+\subsection{Community, Robustness and Development}
 
 \par Starting with the requirement for value, the \emph{Community}, we see that in Git community is healthier than SVN and CVS course. CVS community is clearly outweighed by SVN and Git for double score.
 
@@ -396,7 +406,7 @@ At first glance it is seen that in the overall score \textbf{stands SVN}. \emph{
 
 \par We see that \textbf{Git} highlighted in this comprehensive set of metrics. Being the most important in relation to the initial requirements of the company.
 
-\subsubsection{Usability, Initial Analysis and Functionality}
+\subsection{Usability, Initial Analysis and Functionality}
 
 \par In this group of metrics, \emph{Usability} is the most valuated by its weight. In this case we see how \textbf{SVN with 0.65 points} clearly leads the standings ahead of \textbf{CVS} and \textbf{Git} with \emph{0.55 and 0.49 points} respectively. Usability in SVN very careful as we see in the results. Furthermore compared to other tools strengthens.
 
@@ -406,7 +416,7 @@ At first glance it is seen that in the overall score \textbf{stands SVN}. \emph{
 
 \par In this metrics group we can see that \textbf{SVN is above Git and CVS} regarding \emph{Usability, Funciolidad and Initial Analysis}. These qualities are important as \emph{they are the key for user interaction with the VCS tool} so we have to take into account these results to the overall analysis.
 
-\subsubsection{Documentation}
+\subsection{Documentation}
 
 \par The last group contains only the metric only documentation. Has been relegated to the last place because it has more value to that included in Development. It is important because it contains the manuals and the \emph{results of use and learning}.
 
@@ -434,9 +444,9 @@ Analysis Document with all punctuations and comparisons between the three VCS co
 
 \section{Toolset}
 
-\par Herramienta: es un instrumento que se utiliza para llevar a cabo un trabajo. En este caso la recolección de datos y el análisis son el trabajo realizado.
+\par Tool: anything used as a means of performing an operation or achieving an end\footnote{http://www.wordreference.com/definition/tool}. In this case the data collection and analysis are our end
 
-\par Para este análisis se han utilizado varias herramientas para conseguir la información necesaria.
+\par For this analysis we have used various tools to get the necessary information.
 
 \subsection{Data sources}
 
@@ -460,8 +470,8 @@ We used a pair of tools for obtaining related data repositories.
 \par These two tools related to data mining are developed in python. Its main function is to make public information from a repository to a functional database with which you can easily obtain results about the activity of the community that the project develops.
 
 \begin{itemize}
-    \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - Herramienta para obtener información de un repositorio de código. Crea una base de datos con toda la información referente al repositorio, usuarios, commits, ficheros.
-    \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Librería para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
+    \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - The CVSAnalY tool extracts information out of source code repository logs and stores it into a database. Create a database with all the information regarding the repository, users, commits, files.
+    \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Library to generate reports from the database created by CVSAnaly regarding actions on files in a repository.
 \end{itemize}
 
 \subsection{Repository of Repositories: RoR}
@@ -469,7 +479,7 @@ We used a pair of tools for obtaining related data repositories.
 RoR are analysis repository tools. Display information about project communities: Committers, Groups, Application, Organizations, timelines in an easily visualization and configuration charts. For this analysis we used Ohloh.
 
 \begin{itemize}
-    \item Ohloh\footnote{http://www.ohloh.net/} - Is a RoR where there are 581,685 open source projects analyzed.
+    \item Ohloh\footnote{http://www.ohloh.net/} - Is a RoR where there are 581,685 open source projects analyzed. Contains many tools for displaying information and comparison among projects.
 \end{itemize}
 
 \begin{thebibliography}{9}
