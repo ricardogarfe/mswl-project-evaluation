@@ -1,9 +1,10 @@
 \documentclass[11pt]{scrartcl}
 \usepackage[parfill]{parskip}
+\usepackage{graphicx}
 
 \title{\textbf{Metrics for SCM Analysis}}
 \subtitle{Project Evaluation}
-\author{Ricardo Garc\'ia Fern\'andez}
+\author{Ricardo García Fernández}
 \date{\today}
 
 \begin{document}
@@ -16,14 +17,15 @@
 
 \section{foobar: Big picture}
 
-foobar: Is a Software Development Company focussed in web data mining applications and result interpretation.
+\emph{foobar}: Is a Software Development Company focussed in web data mining applications and result interpretation.
 
-\par Delevop analysis from social media networks and crawler to convert all the information to a human-readable solution for our clients. As some examples we are expertise in issue trackers visualization chars tools to convert the information into graphic that assist the project manager to make decisions faster and easily with just a look.
+\par Delevop analysis from social media networks, crawlers and issue trackers to convert all the information to a human-readable solution for our clients. As some examples we are expertise in issue trackers visualization chars tools to convert the information into graphic that assist the project manager to make decisions faster and easily with just a look.
 
 \section{Integrate VCS}
 
-We need to implement a forge because our developers are in different physical locations and want intergrar tools for more efficient management.
-We want to integrate tools are:
+We need to implement a forge because our developers are in different physical locations and want to intergrate all development and managing tools for more efficient management.
+
+The tools that we want to integrate are:
 
 \begin{itemize}
     \item Version Control System VCS
@@ -35,52 +37,66 @@ We want to integrate tools are:
 
 In this analysis we will begin the search for a VCS to suit our requirements.
 
-\section{Requirements}
-
-
-
 \section{VCS}
 
-\par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La informaci\'on queda reflejada en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos a los usuarios.
+\par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gestión de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La información queda reflejada en una base de datos, creando un histórico y ofreciendo una gestión ágil de los recursos a los usuarios.
 
-\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de unas m\'etricas establecidas adaptadas a nuestros requerimientos.
+\par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el análisis de unas métricas establecidas adaptadas a nuestros requerimientos.
 
-\subsection{Subversion}
+\subsection{Subversion: SVN}
 
-\textbf{Subversion}\footnote{http://subversion.tigris.org/}: es un Sistema de Control de Versiones de c\'odigo abierto. Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/} perteneciente a la fundaci\'on Apache.
+\textbf{Subversion}\footnote{http://subversion.tigris.org/}: is a FLOSS\footnote{Free Libre Open Source Software} Version Control System. It was created in 2000 by the company Collabnet belonging to the Apache Foundation.
 
-\par Es el VCS m\'as utilizado en los proyectos relacionados con el desarrollo de proyectos de software libre\footnote{http://www.ohloh.net/repositories/compare} y proyectos privados.
+\par SVN is the VCS most used in FLOSS\footnote{http://www.ohloh.net/repositories/compare} and private proyects as a Source Code Management (SCM) tool
 
 \subsection{Git}
 
-
 \subsection{CVS}
 
+\section{Requirements}
+
+Our initial requirements for the election of VCS tool are:
+
+\begin{itemize}
+    \item GUI Management Tools.
+    \item Integration with IDEs.
+    \item Mature and Stable versions.
+    \item Lower learning curve.
+    \item Success cases.
+    \item License.
+    \item Backup and restore.
+    \item Migration guide.
+    \item fork easily.
+\end{itemize}
+
+These requeriments has to become metrics because in this way we can evaluate with a technical and standard process.
 
 \section{Metrics: Analysis}
 
-M\'etricas: Son un conjunto de cualidades evaluables que aportan informaci\'on cuantificable para el resultado del an\'alisis.
+Metrics: These are a set of measurable attributes that provide quantifiable information for the test result.
 
-\par Se ha de definir un conjunto de m\'etricas para la evaluaci\'on del proyecto Subversion y poder cuantificar con una nota el resultado final. De esta manera, obtenemos un resultado num\'erico del proyecto que estamos analizando.
+\par It is to define a set of metrics to evaluate the VCS projects and be able to quantify the final note. In this way, we obtain a numerical result of the project under review.
 
-\par Este resultado lo podemos comparar analizando otras soluciones existentes para nuestro problema.
-Las comparaciones se hacen con el resultado obtenido a partir de las mismas premisas para los diferentes Sistemas de Control de Versiones y as\'i nos facilita la elecci\'on del m\'as adecuado mediante la representaci\'on de valores.
+\par This result can be compared by analyzing other existing solutions to our problem.
+Comparisons are made with the results obtained from the same premises for different version control systems and thus enables us to choose the most appropriate by value representation.
 
 \subsection{OpenBRR Model}
 
-\par Existen modelos de an\'alisis de proyectos establecidos. Como por ejemplo OpenBRR\footnote{http://www.openbrr.org/} en el que se ha basado este an\'alisis. 
+\par Exist some analysis project models such OpenBRR which this analysis is based
 
-\par OpenBRR nace como un proyecto de unificaci\'on de m\'etricas para los proyectos de Software. Este modelo se considera libre ya que est\'a orientado a los proyectos de Software Libre (FLOSS). Naci\'o en el a\~no 2005 con ese fin pero, como en su p\'agina web se indica, no ha llegado a crear una gran comunidad alrededor.
+\par OpenBRR was created as a project of unification of metrics for software projects. This model is considered free as it is project-oriented Free Software (FLOSS). Born in the year 2005 for this purpose but, as its website indicates, has failed to create a large community around.
 
-\par Otorga la libertad a la hora de puntuar cada m\'etrica mediante una puntaci\'on de \textbf{1 a 5}. Cada secci\'on est\'a divida para ser m\'as espec\'ifica en sub-m\'etricas. Despu\'es, se otorga un peso espec\'ifico a cada una y de esta forma, se dota de mayor peso a la m\'etrica que se considera m\'as importante por parte del usuario del modelo. Genera un resultado adecuado para el an\'alisis.
+\par Gives freedom when scoring each metric by a score of 1-5. Each section is divided to be more specific sub-metrics. Next, specific weight is given to each and thus be given greater weight to the metric that is considered more important by the user of the model. Generates output suitable for analysis.
 
-\par El peso de las m\'etricas ofrece un resultado m\'as personalizado al usuario y por lo tanto m\'as cercano y manejable. Por ejemplo: si la m\'etrica de documentaci\'on tiene un peso de 50\% a diferencia de la m\'etrica relacionada con la seguridad con un 10\%, estamos buscando un Software en el que la documentaci\'on es la parte m\'as importante para nuestro proyecto y por lo tanto despu\'es de la recolecci\'on de datos elegiremos seguramente la que haya obtenido una puntuaci\'on m\'as alta con respecto a la documentaci\'on. Es un ejemplo a grandes rasgos pero bastante claro.
+\par The weight of the resulting metric provides personalized for the user and therefore nearest and manageable. For example: if the metric of documentation has a weight of 50 \% as opposed to security-related metrics with 10 \%, we are seeking a Software documentation which is the most important for our project and so both after data collection surely choose who has obtained the highest score with respect to documentation. It is an example roughly but quite clear. The weight is the most important because the final result depends on the value that we give to each section or metric. Thus we have an outcome directly related to our initial requirements.
 
-\subsection{Choosed Metrics}
+\par We adapted OpenBRR model using scoring one to five (without 0 value) for each defined metric thus give us a wide range of possibilities and scalability to match a good result.
 
-\par Se han elegido un conjunto de m\'etricas para representar los valores m\'as importantes relacionados con la gesti\'on de los archivos. Este conjunto es espec\'ifico para evaluar Software por lo que podemos reutilizar la mayor\'ia de m\'etricas obtenidas para otro tipo de proyectos de Software.
+\subsection{Metrics chosen}
 
-\par A partir del modelo \emph{OpenBRR} se han a\~nadido algunas m\'etricas nuevas y eliminado otras para as\'i crear el modelo espec\'fico para nuestro caso.
+\par We have chosen a set of metrics to represent the most important values ​​related to file management. This set is specific for evaluating software so we can reuse most metrics obtained for other software projects.
+
+\par Extending the model \emph{OpenBRR} have added some new metrics and eliminated other in order to create the specific model for our case.
 
 \begin{tabular}{|l|}
     \hline {\bf Category}\\
@@ -96,9 +112,9 @@ Las comparaciones se hacen con el resultado obtenido a partir de las mismas prem
 
 \subsection{Weight \& Punctuation}
 
-Despu\'es del an\'alisis de los requerimientos y puntuaci\'on de las m\'etricas se procede a dar un peso espec\'ifico a cada secci\'on definida en el documento. El peso otorgado es lo que da el valor final que busca el usuario para poder crear una resultado subjetivo a partir de una puntuaci\'on objetiva. Es decir, adecuar las necesidades de la empresa al producto que se est\'a analizando.
+After analyzing the requirements and scoring metrics, we proceed to give a weight to each section defined in the document. The weight given is what gives the final value that the user seeks to create a subjective result from an objective score. That is, to adapt to the needs of the company to the product being analyzed.
 
-Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
+We defined the weight given to each category in the table below:
 
 \begin{tabular}{|l|l|}
     \hline Category & Weight\\
@@ -112,17 +128,24 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
     \hline
 \end{tabular}
 
-\par Se puede apreciar que el valor al que se da m\'as peso es la Community con un 19\%, seguido de Robustness con un 17\% y Development con un 15\%. 
+\par You can see that the value that is given more weight is Community with 19 \%, followed Robustness with 17 \% and Development with 15 \%. 
 
 \subsubsection{Community, Robustness and Development}
 
-\par Podemos ver como destaca la \emph{Community} debido a que al ser un proyecto FLOSS dependemos en parte de la interacci\'on de la comunidad, es decir de la salud de la misma. A simple vista parece que goza de buena salud debido a su historial pero en los \'ultimos a\~nos ha venido decreciendo el trabajo reflejado en la comunidad con respecto a las listas de email y los commits por mes. Tambi\'en se puede destacar que el grupo de desarrolladores inicial no est\'a presente en el desarrollo actual de una manera activa pero esto no ha afectado al desarrollo. Se ha renovado el n\'ucleo de desarrolladores otorgando robustez al proyecto.
+\par We can see how the metric highlights related \emph{Community} because being a FLOSS project depend in part on the interaction of the community, ie the health of it. At first it seems to be in good health because of its history but in recent years has been decreasing the work reflected in the community regarding email lists and commits per month. It can also be noted that the initial development team is not present in the current development of an active but this has not affected the development. There has been renewed core providing strength to the project developers.
+
+\begin{figure}
+  \centering
+    \includegraphics[width=0.8\textwidth]{libcsvanaly2/script_sample/basic_timeseries.png}
+  \caption{Commit evolution during 2012}
+  \label{fig:2012-monthy-commmits}
+\end{figure}
 
 \begin{itemize}
     \item Avg commits per month, last six months.
         \begin{itemize}
             \item Compare with other projects or \textbf{itself with other year results}. Comparision with six month and twelve earlier.
-            \item \textbf{Result}: Less work than a year before on total commits (-,-,-,-,-,+)
+            \item \textbf{Result}: Less work than a year before on total commits (-,-,-,-,-,+) as show in figure~\ref{fig:2012-monthy-commmits}:
         \end{itemize}
     \item Avg monthly volumen of general mailing lists during the last six months
     \begin{itemize}
@@ -137,7 +160,7 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
                 Jul (1.4M) & Aug (3.3M) & Sep (1.9M) & Oct (1.7M) & Nov (1.7M) & Dec (497K)\\
                 \hline
             \end{tabular}
-        \item Decreases (-,+,-,-,-,-).
+        \item \textbf{Decreases}.
     \end{itemize}
     \item Developers that left the project and those that started to participate (last year) (and also for the core team)
     \begin{itemize}
@@ -151,7 +174,7 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
     \end{itemize}
 \end{itemize}
 
-\par Por parte de la \emph{Robustez} podemos afirmar que se trata de un proyecto completo. Afirmamos esto despu\'es de observar el cuidado que hay en cada una de las versiones que ha ido publicando y el tratamiento que se da a las mismas. Mantiene una versi\'on anterior viva (1.6) \'unicamente por si existen errores de seguridad mientras que el desarrollo contin\'ua hacia adelante con la versi\'on actual (1.7) arreglando los errores y publicando cada parche con una media de dos meses. Estos datos se han recogido para el a\~no 2012.
+\par By the \emph{Robustness} can say that this is a complete project. We say this after observing the care that is in each of the versions that have been published and the treatment given to them. It keeps alive a previous version (1.6) only if there are security errors while development continues forward with the current version (1.7) fixing bugs and releasing each patch with an average of two months. These data were collected for 2012.
 
 \begin{itemize}
     \item Versions
@@ -186,7 +209,7 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
     \end{itemize}
 \end{itemize}
 
-\par Con respecto al \emph{Desarrollo} vemos que la puntuaci\'on es buena ya que cuenta con distintas APIs (en varios lenguajes de programaci\'on C y Java que son los más extendidos\footnote{http://www.ohloh.net/languages/compare?measure=loc\_changed\&percent=true} y demandados\footnote{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html}) y se utiliza en proyectos externos por lo que es una pr\'actica extendida. Pero claro, has de saber programar para poder entender el API.
+\par Regarding \emph{Development} we see that the score is good because it has various APIs (in various programming languages ​​C and Java are the most widespread\footnote{http://www.ohloh.net/languages/compare?measure=loc\_changed\&percent=true} and demanded in the market\footnote{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html}) and is used in external projects so it is a widespread practice. But of course, you have to know how to program in order to understand the API.
 
 \begin{itemize}
     \item Project API in the same web - Client for Java and C.
@@ -194,26 +217,26 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
     \item Is it used in other projects not directly related? - Yes, from extra plugins, functionalities, integrated in aplications and forges.
 \end{itemize}
   
-\par La documentaci\'on incluida en la parte de desarrollo es muy extensa y clara. Dispone de diferentes ejemplos para inicializar repositorios y proyectos. Los manuales cuentan con ejemplos relacionados con cada opci\'on y la documentaci\'on es clara y concisa. Cuenta con un libro SVNBook en distintos idiomas que ayuda mucho a la toma de contacto con la herramienta. Por parte de la ayuda offline, no hay mucho m\'as all\'a que el comando \textbf{man} (documentaci\'on propia del a herramienta), donde no existen buenos ejemplos de uso.
+\par The documentation included in the development is extensive and clear. There are various examples to initialize repositories and projects. The manuals include examples related to each option and the documentation is clear and concise. Svnbook has a book in different languages. Reading the book helps a lot in making contact with the tool. By the offline help, not much beyond the command \textbf{man} (own documentation of a tool), where there are no good examples of use.
 
 \begin{itemize}
-    \item Online tutorials - Development
+    \item Online tutorials - Development\footnote{http://subversion.apache.org/docs/} and API documentation too.
     \item Offline tutorials - SVNBook\footnote{http://svnbook.red-bean.com/}
     \item Hello World - Tutorial to initialize a Repository in 10 minutes.
     \item Books from the author, authors or company -  SVNBook
-    \item Languages - Various Languages (Deutsch | English | French | Espa\~nol | Italiano | Japanese | Noruego | Portugu\'es | Russo | Chinese)
+    \item Languages - Various Languages (Deutsch | English | French | Spanish | Italian | Japanese | Norwegian | Portuguese | Russian | Chinese)
 \end{itemize}
 
 \par En un segundo grupo podemos ver que aparecen Usability 14\%, Initial Analysis 13\% y Functionality 12\%.
 
 \subsubsection{Usability, Initial Analysis and Functionality}
 
-\par \emph{Usability}, en este caso nos referimos a la usabilidad relacionada con la interacci\'on entre el usuario y la herramienta. La configuraci\'on en un servidor es una parte destacada que podemos apreciar en el apartado interno \emph{UI Client}. Existen varias opciones v\'alidas para la gesti\'on del control de la herramienta. Por otra parte tambi\'en se observa que esta herramienta est\'a bastante extendida y tiene una curva de aprendizaje alta pero hay que contar con que has de ser una persona t\'ecnica para poder sacar provecho m\'as r\'apidamente de las funcionalidades que nos presenta Subversion.
+\par \emph{Usability}, in this case we refer to the usability related to the interaction between the user and the tool. The server configuration is a highlight that we see in the inner section \emph{Client UI}. Several options are valid for the control management tool. Moreover we also observe that this tool is widespread and has a high learning curve but that you have to be a technical person to quickly take advantage of the functionality that presents Subversion.
 
 \begin{itemize}
     \item UI client
 	    \begin{itemize}
-            \item Internal (server management) - Using svnadmin command.
+            \item Internal (server management) - Using \emph{svnadmin} command in server mode.
             \item Included - It's included in the installation.
             \item Extra plugin - Has extra plugin to apply this functionalities but not depends on it.
             \item Web client - User-Friendly SVN\footnote{http://www.usvn.info/} promoted by Collabnet.
@@ -221,23 +244,23 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
 
     \item Easy learning
 	    \begin{itemize}
-            \item Too technical 
+            \item Too technical - Not too much technical to use.
             \item Early adoption - Is the most VCS used around the world of Software Development.
-            \item High learning curve - Yes, it's easy to get in touch and work.
+            \item Low learning curve - Yes, it's easy to get in touch and work.
         \end{itemize}
 \end{itemize}
 
-\par El apartado \emph{Initial Analysis} engloba dos valores importantes, la licencia con la que est\'a publicado el Software y el tiempo que se tarda en lanzar el primer repositorio. Por parte de la licencia se trata de la Licencia Apache v2.0. Es una Licencia FLOSS 'estandar' que es compatible con la Licencia GPLv3. La Licencia Apache v2.0 nos otorga pleno control sobre el c\'odigo y facilita los aportes a la distribuci\'on oficial por parte de terceros.
+\par \emph{Initial Analysis} section includes two important values​​, the license under which the software is released and the time it takes to launch the first repository. As part of the license is the Apache License v2.0\footnote{http://www.apache.org/licenses/LICENSE-2.0}. FLOSS License is an \emph{standard} that is compatible with \emph{GPLv3}\footnote{http://www.apache.org/licenses/GPL-compatibility.html}. The Apache License v2.0 gives us full control over the code and provide inputs to the official distribution by third parties.
 
 \begin{itemize} 
     \item Private - \textbf{No}
-    \item Free Software: Non standard (My own license)
-    \item Free Software: \textbf{Standard} (included in list of most used FLOSS Licences)
+    \item Free Software: Non standard (My own license) \textbf{No}
+    \item Free Software: \textbf{Standard}. Included in list of most used FLOSS Licences in OSI\footnote{http://opensource.org/licenses/index.html} and FSF directory\footnote{http://www.gnu.org/licenses/license-list.en.html}.
     \item Dual Licensing: \textbf{No}
-    \item Compatible with others - \textbf{Yes}: The result is a license that is supposed to be compatible with other open source licenses, while remaining true to the original goals of the Apache Group and supportive of collaborative development across both nonprofit and commercial organizations. The Apache Software Foundation is still trying to determine if this version of the Apache License is compatible with the GPL.\footnote{http://www.apache.org/licenses/GPL-compatibility.html}    
+    \item Compatible with others - \textbf{Yes}: The result is a license that is supposed to be compatible with other open source licenses, while remaining true to the original goals of the Apache Group and supportive of collaborative development across both nonprofit and commercial organizations. The Apache Software Foundation is still trying to determine if this version of the Apache License is compatible with the GPL.\footnote{http://www.apache.org/licenses/GPL-compatibility.html}
 \end{itemize}
 
-\par El momento de la primera prueba es bastante cr\'itico por lo que a mi respecta. Vemos que en un margen de tiempo de 10 a 30 minutos se publica un repositorio Subversion para el acceso de usuarios. Este tiempo es un \'exito ya que el primer contacto es el m\'as importante y no se pierde tiempo. Un repositorio online funcional de 10 a 30 minutos.
+\par The time of the first test is very critical as far as I'm concerned. We see that in a time frame of 10 to 30 minutes you publish a Subversion repository for user access. This time is a success as the first contact is the most important and time is not wasted. Publish a functional online repository in between 10 to 30 minutes.
 
 \begin{itemize}
     \item \textgreater
@@ -249,63 +272,63 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
 10 minutes
 \end{itemize}
 
-\par En la categor\'ia \emph{Funcionality} la Interfaz de Usuario ocupa el lugar m\'as destacado con un 40\% de la puntuaci\'on. Las m\'ultiples opciones que ofrece Subversion para acceder a la gesti\'on del repositorio independientemente del nivel que tenga el usuario, hacen de esta herramienta que su acceso sea r\'apido y f\'acil para las distintas clases de usuarios que pueda encontrarse.
+\par In the category \emph{Funcionality}, UI foremost ranks with 40 \% of the score. The multiple options to access Subversion repository management regardless of having the user level, make this tool your fast and easy access to the different types of users to be found.
 
 \begin{itemize}
     \item Console client - Yes included.
     \item OS file explorer integration - Collabnet Tortoise SVN - http://tortoisesvn.tigris.org/ GPL)
     \item Graphic client - Tortoise SVN.
     \item Specific plugin for tools - Eclipse Plugin by Tigris: Subclipse - http://subclipse.tigris.org/
-    \item Solution from the same company - Collabnet - http://www.usvn.info/ Cecill License (GPL Compatible)
+    \item Solution from the same company - Yes, Collabnet - http://www.usvn.info/ using Cecill License (GPL Compatible)
 \end{itemize}
 
-\par Un punto a tener en cuenta es el relacionado con Backup and restore. Este aspecto lo ha cuidado mucho Subversion incluyendo una herramienta propia para poder gestionar las copias de la base de datos de los repositorios y una r\'apida recuperaci\'on. Se integra con todos los sistemas operativos y puede ser configurada f\'acilmente.
+\par One point to note is related to \emph{Backup and restore}. This aspect has been very careful in Subversion. Includes a proprietary tool to manage copies of the database repository and a speedy recovery. Integrates with all operating systems and can be configured easily.
 
 \begin{itemize}
-    \item Nothing - Not necessary.
-    \item Workaround solution - Not necessary.
-    \item Extra plugin - Not necessary
-    \item Included - Yes, has a tool to backup repository database included.
-    \item Easily Configurable - Backup from svn database using 'svnadmin dump' command total or incremental. Use 'svnadmin load' to restore backup version.
+    \item Nothing - \emph{Not necessary}.
+    \item Workaround solution - \emph{Not necessary}.
+    \item Extra plugin - \emph{Not necessary}.
+    \item Included - \textbf{Yes}, has a tool to backup repository database included.
+    \item Easily Configurable - \emph{Backup from svn database} using \emph{svnadmin dump} command total or incremental. Use \emph{svnadmin load} to restore backup version.
 \end{itemize}
 
-\par En el apartado de seguridad conocido como Profile management, vemos que la estructura de Subversion se divide en directorios, todo son directorios. Por lo que los permisos tambi\'en se otorgan a partir de directorios, grupos y usuarios. Es el cl\'asico sistema de permisos en el que nos ofrece una herramienta visual online USVN para que los no tan t\'ecnicos se despreocupen de configuraciones en el servidor y gestionen los grupos, usuarios y permisos sobre proyectos.
+\par En el apartado de seguridad conocido como Profile management, vemos que la estructura de Subversion se divide en directorios, todo son directorios. Por lo que los permisos también se otorgan a partir de directorios, grupos y usuarios. Es el clásico sistema de permisos en el que nos ofrece una herramienta visual online USVN para que los no tan técnicos se despreocupen de configuraciones en el servidor y gestionen los grupos, usuarios y permisos sobre proyectos.
 
-\par Por \'ultimo la secci\'on de Documentation con un 10\%. Esta secci\'on tambi\'en est\'a incluida dentro de Development por lo que se valora mucho m\'as la documentaci\'on relacionada con el desarrollo de la herramienta que la documentaci\'on como tal.
+\par Finally the Documentation section with a weight of 10 \%. This section is also included within Development is valued so much documentation related to the development of the tool documentation as such.
 
 \subsubsection{Documentation}
 
-\par Esta secci\'on ha pesado menos en el an\'alisis total. Cabe destacar como hemos hecho anteriormente que cuenta con una muy buena documentaci\'on online para los servicios que ofrece la herramienta Subversion aunque falta algo m\'as de documentaci\'on offline.
+\par This section has weighed less in the total analysis. Notably, as we have done previously that has a very good online documentation for the services offered by the tool Subversion but takes more documentation offline.
 
 \begin{itemize}
     \item Online tutorials - Development
     \item Offline tutorials - SVNBook
     \item Hello World - Init a Repository in 10 minutes
     \item Books from the author, authors or company - SVNBook
-    \item Languages - Various Languages (Deutsch | English | French | Espa\~nol | Italiano | Japanese | Noruego | Portugu\'es | Russo | Chinese)
+    \item Languages - Various Languages (Deutsch | English | French | Spanish | Italian | Japanese | Norwegian | Portuguese | Russian | Chinese)
 \end{itemize}
 
 \section{Results}
 
-Podemos apreciar que el resultado obtenido es una puntuaci\'on de \textbf{4,2 sobre 5} que se traduce a \textbf{83,97 sobre 100}.
+We can see that the result is a score of \textbf{4.29 out of 5}. This result is transferred to a score of \textbf{85.87 out of 100} (applying rounding to two decimal places for each calculation).
 
 \begin{tabular}{|l|l|l|l|}
     \hline {\bf Category} & {\bf Weight} & {\bf Unweighted Rating} & {\bf Weighted Rating}\\
-    \hline Initial Analysis	 & 13,00\% & 4,14 & 0,54 \\
+    \hline Initial Analysis	 & 13,00\% & 4,06 & 0,53 \\
     \hline Functionality & 12,00\% & 4,37 & 0,52\\
     \hline Usability & 14,00\% & 4,67 & 0,65\\
-    \hline Robustness & 17,00\% & 4,46 & 0,76\\
-    \hline Development & 15,00\% & 4,36 & 0,65\\
-    \hline Community & 19,00\% & 3,45 & 0,66\\
-    \hline Documentation & 10,00\% & 4,15 & 0,42\\
+    \hline Robustness & 17,00\% & 4,61 & 0,78\\
+    \hline Development & 15,00\% & 4,47 & 0,67\\
+    \hline Community & 19,00\% & 3,65 & 0,69\\
+    \hline Documentation & 10,00\% & 4,4 & 0,44\\
     \hline
 \end{tabular}
 
-\par Siguiendo el modelo OpenBRR la puntuaci\'on obtenida sobre 100 se considerar\'ia aceptable ya que se encuentra dentro del rango de 80 a 90 puntos. Esta puntuaci\'on por si sola no nos dice mucho m\'as que el n\'umero.
+\par Following the model proposed by OpenBRR, the score of 100 is considered acceptable since it is within the range of 80 to 90 points. This score alone does not tell us much more than the number.
 
-\par Ahora falta la comparaci\'on con los otros Sistemas de Control de Versiones aplicando las mismas m\'etricas descritas en el documento. De esta forma podemos obtener unos n\'umeros comparables y elegir el que m\'as de adecue a nuestras necesidades.
+\par Now we have to make the comparison with other Version Control Systems using the same metrics described in the document. In this way we can obtain comparable numbers and choose the VCS that more suits our needs.
 
-\section{Results}
+\section{Compare Results}
 
 % Todos los resultados en tabla comparativa
 
@@ -314,7 +337,7 @@ Podemos apreciar que el resultado obtenido es una puntuaci\'on de \textbf{4,2 so
 \section{Further work}
 
 Resumen, que posibilidades se han dejado fuera y futuribles.
-% TODO: maillist, bugtracker, standards, foundation, uses, succed.
+% TODO: maillist, bugtracker, standards, foundation, uses, succed, mentoring programs\footnote{http://subversion.apache.org/docs/community-guide/}.
 
 \section{Analysis Document}
 
@@ -331,16 +354,16 @@ Here is the full metric list and its punctuation explanation. If you are interes
 
 \section{Toolset}
 
-\par Herramienta: es un instrumento que se utiliza para llevar a cabo un trabajo. En este caso la recolecci\'on de datos y el an\'alisis son el trabajo realizado.
+\par Herramienta: es un instrumento que se utiliza para llevar a cabo un trabajo. En este caso la recolección de datos y el análisis son el trabajo realizado.
 
-\par Para este an\'alisis se han utilizado varias herramientas para conseguir la informaci\'on necesaria.
+\par Para este análisis se han utilizado varias herramientas para conseguir la información necesaria.
 
 \subsection{Data sources}
 
 Data Sources from internet:
 
 \begin{itemize}
-    \item Website - http://subversion.apache.org/
+    \item Website - http://subversion.apache.org/ \& http://subversion.tigris.org/
     \item Source code management system - svn co http://svn.apache.org/repos/asf/subversion subversion
     \item Releases - http://subversion.apache.org/packages.html
     \item Wikis - http://wiki.apache.org/subversion/
@@ -352,15 +375,21 @@ Data Sources from internet:
 
 \subsection{Data mining Applications}
 
+We used a pair of tools for obtaining related data repositories.
+
+\par These two tools related to data mining are developed in python. Its main function is to make public information from a repository to a functional database with which you can easily obtain results about the activity of the community that the project develops.
+
 \begin{itemize}
-    \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
-    \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
+    \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - Herramienta para obtener información de un repositorio de código. Crea una base de datos con toda la información referente al repositorio, usuarios, commits, ficheros.
+    \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Librería para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
 \end{itemize}
 
 \subsection{Repository of Repositories: RoR}
 
+RoR are analysis repository tools. Display information about project communities: Committers, Groups, Application, Organizations, timelines in an easily visualization and configuration charts. For this analysis we used Ohloh.
+
 \begin{itemize}
-    \item ohloh\footnote{http://www.ohloh.net/} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
+    \item Ohloh\footnote{http://www.ohloh.net/} - Is a RoR where there are 581,685 open source projects analyzed.
 \end{itemize}
 
 \section{Metrics: Full List}
@@ -431,7 +460,7 @@ Data Sources from internet:
         	\begin{itemize}
                 \item Too technical 
                 \item Early adoption - Is the most VCS used around the world of Software Development.
-                \item High learning curve - Yes, it's easy to get in touch and work.
+                \item Low learning curve - Yes, it's easy to get in touch and work.
             \end{itemize}
         \end{itemize}
 
@@ -489,7 +518,7 @@ Data Sources from internet:
                 \item Offline tutorials - SVNBook\footnote{http://svnbook.red-bean.com/}
                 \item Hello World - Tutorial to initialize a Repository in 10 minutes.
                 \item Books from the author, authors or company -  SVNBook
-                \item Languages - Various Languages (Deutsch | English | French | Espa\~nol | Italiano | Japanese | Noruego | Portugu\'es | Russo | Chinese)
+                \item Languages - Various Languages (Deutsch | English | French | Spanish | Italian | Japanese | Norwegian | Portuguese | Russian | Chinese)
             \end{itemize}
     \end{itemize}
 
@@ -535,7 +564,7 @@ Data Sources from internet:
                 \item Offline tutorials - SVNBook
                 \item Hello World - Init a Repository in 10 minutes
                 \item Books from the author, authors or company - SVNBook
-                \item Languages - Various Languages (Deutsch | English | French | Espa\~nol | Italiano | Japanese | Noruego | Portugu\'es | Russo | Chinese)
+                \item Languages - Various Languages (Deutsch | English | French | Spanish | Italian | Japanese | Norwegian | Portuguese | Russian | Chinese)
             \end{itemize}
     \end{itemize}
 

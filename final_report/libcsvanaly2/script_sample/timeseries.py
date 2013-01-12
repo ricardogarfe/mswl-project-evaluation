@@ -81,7 +81,7 @@ def main(database):
    plt.title('Evolution of Commits')
    plt.plot(dates, commits)
    fig.autofmt_xdate()
-   plt.savefig('basic_timeseries.eps')
+   plt.savefig('basic_timeseries.png')
 
 
 if __name__ == "__main__":main(sys.argv[1])
