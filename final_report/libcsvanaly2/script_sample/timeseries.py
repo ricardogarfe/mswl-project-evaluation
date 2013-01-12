@@ -62,7 +62,7 @@ def get_dates_commits(dates_commits):
 def main(database):
 
    #Commits per committer limited to the 30 first with the highest accumulated activity
-   query = "select year(date), month(date), day(date), count(*) from scmlog group by year(date), month(date), day(date)"
+   query = "select year(date), month(date), day(date), count(*) from scmlog where year(date) = 2012 group by year(date), month(date), day(date)"
 
    #Connecting to the data base and retrieving data
    connector = connect(database)
