@@ -1,6 +1,8 @@
 \documentclass[11pt]{scrartcl}
 \usepackage[parfill]{parskip}
 \usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabulary}
 
 \title{\textbf{Metrics for SCM Analysis}}
 \subtitle{Project Evaluation}
@@ -166,7 +168,7 @@ We defined the weight given to each category in the table below:
     \begin{itemize}
         \item Started to participate las year: \textbf{6}
     \end{itemize}
-    \item Knowledge concentration (territoriality) \textbf{TBC}
+	    \item Knowledge concentration (territoriality): In 2012 year we can assume a territoriality over 80\% with 8538 actions from the total of 10417 in files per one developer, so 81,96\%.
     \item Is still the original developer/team active nowadays? Yes, innactive.
     \begin{itemize}
         \item How did affect the project ? commits avg continued normal ?
@@ -314,13 +316,13 @@ We can see that the result is a score of \textbf{4.29 out of 5}. This result is 
 
 \begin{tabular}{|l|l|l|l|}
     \hline {\bf Category} & {\bf Weight} & {\bf Unweighted Rating} & {\bf Weighted Rating}\\
-    \hline Initial Analysis	 & 13,00\% & 4,06 & 0,53 \\
-    \hline Functionality & 12,00\% & 4,37 & 0,52\\
-    \hline Usability & 14,00\% & 4,67 & 0,65\\
-    \hline Robustness & 17,00\% & 4,61 & 0,78\\
-    \hline Development & 15,00\% & 4,47 & 0,67\\
-    \hline Community & 19,00\% & 3,65 & 0,69\\
-    \hline Documentation & 10,00\% & 4,4 & 0,44\\
+    \hline {\bf Initial Analysis}	 & 13,00\% & 4,06 & 0,53 \\
+    \hline {\bf Functionality} & 12,00\% & 4,37 & 0,52\\
+    \hline {\bf Usability} & 14,00\% & 4,67 & 0,65\\
+    \hline {\bf Robustness} & 17,00\% & 4,61 & 0,78\\
+    \hline {\bf Development} & 15,00\% & 4,47 & 0,67\\
+    \hline {\bf Community} & 19,00\% & 3,65 & 0,69\\
+    \hline {\bf Documentation} & 10,00\% & 4,4 & 0,44\\
     \hline
 \end{tabular}
 
@@ -330,7 +332,64 @@ We can see that the result is a score of \textbf{4.29 out of 5}. This result is 
 
 \section{Compare Results}
 
-% Todos los resultados en tabla comparativa
+In the table below we can see a comparison of the results obtained from the analysis of the three possible solutions, \emph{SVN}, \emph{Git} and \emph{CVS} using \emph{Unweighted Rating (UR)} and \emph{Weighted Rating (WR)}:
+
+\begin{tabular}{|l|l|l|l|l|l|l|l|}
+    \hline
+     &  & {\bf Subversion} &   & {\bf Git} &  & {\bf CVS} &  \\
+    \hline
+    {\bf Category} & {\bf Weight} & {\bf UR} & {\bf WR} & {\bf UR} & {\bf WR} & {\bf UR} & {\bf WR}\\
+    \hline
+    {\bf Initial Analysis} & 13,00\% & 4,06 & {\bf 0,53} & 3,12 & 0,41 & 4,06 & {\bf 0,53}\\
+    \hline
+    {\bf Functionality} & 12,00\% & 4,37 & 0,52 & 4,7 & {\bf 0,56} & 3,81 & 0,46\\
+    \hline
+    {\bf Usability} & 14,00\% & 4,67 & {\bf 0,65} & 3,53 & 0,49 & 3,93 & 0,55\\
+    \hline
+    {\bf Robustness} & 17,00\% & 4,61 & 0,78 & 4,73 & {\bf 0,8} & 3,03 & 0,52\\
+    \hline
+    {\bf Development} & 15,00\% & 4,47 & 0,67 & 4,67 & {\bf 0,7} & 3,78 & 0,57\\
+    \hline
+    {\bf Community} & 19,00\% & 3,65 & 0,69 & 4,1 & {\bf 0,78} & 1,96 & 0,37\\
+    \hline
+    {\bf Documentation} & 10,00\% & 4,4 & 0,44 & 5 & {\bf 0,5} & 3,3 & 0,33\\
+    \hline
+    {\bf Totals} & 100,00\% & 4,29 & {\bf 85,87} & 4,25 & 84,95 & 3,32 & 66,4\\
+    \hline
+\end{tabular}
+
+\par At first glance it is seen that in the overall score \textbf{85.87 points} against \textbf{SVN} with minimal difference \textbf{Git 84.95}. CVS is relegated to a distant third with respect to both with 66.4 points.
+At first glance it is seen that in the overall score \textbf{stands SVN}. \emph{SVN} gets a score of \textbf{85.87 points} with a minimum difference with \emph{Git}. \emph{Git} gets a score of \textbf{84.95 points}. \emph{CVS} is relegated to a distant third with respect to both with \textbf{66.4 points}.
+
+\par For further analysis, we divided the analysis in the same groups previously selected by the representation of requirements through the weights.
+
+\par Although at first glance it seems that will fight to the death between SVN and Git.
+
+\subsubsection{Community, Robustness and Development}
+
+\par Starting with the requirement for value, the \emph{Community}, we see that in Git community is healthier than SVN and CVS course. CVS community is clearly outweighed by SVN and Git for double score.
+
+\par In \emph{Robustness} metric results we ​​can appreciate \emph{evenly between SVN and Git (0.78 vs. 0.8)}, whereas the score \emph{CVS sinks back to 0.52}. SVN and CVS are on par with this paragraph.
+
+\par Finally, the results obtained by the metric associated with the development, you see, again, a near tie between \textbf{SVN and Git} with \emph{0.67 and 0.7 points respectively}. CVS \emph{falls again} relegated to last place with \textbf{0.57 points}, not as far back as in the above metrics. This metric is important because it includes the score related documentation and API. These two points have to be taken into account because \emph{we will have to work with them to integrate the VCS}.
+
+\par We see that \textbf{Git} highlighted in this comprehensive set of metrics. Being the most important in relation to the initial requirements of the company.
+
+\subsubsection{Usability, Initial Analysis and Functionality}
+
+\par In this group of metrics, \emph{Usability} is the most valuated by its weight. In this case we see how \textbf{SVN with 0.65 points} clearly leads the standings ahead of \textbf{CVS} and \textbf{Git} with \emph{0.55 and 0.49 points} respectively. Usability in SVN very careful as we see in the results. Furthermore compared to other tools strengthens.
+
+\par \emph{Initial Analysis} also led \textbf{SVN with 0.53 points tying with CVS}. One can say that being the oldest VCS weight we have given to the metrics relating to the qualities of the licenses they use and \emph{easy setup of applications} are best suited to the detriment of \textbf{Git with 0.41 points}. Maybe that's immaturity in Git.
+
+\par By the \emph{Functionality} related metric can observe the good quality in \textbf{Git with 0.56 points}, \emph{followed by SVN and CVS} with \textbf{0.52 points with 0.46 points}. The quality of the functionality in Git can claim to be high, because it has exceeded two VCS score established for over ten years.
+
+\par In this metrics group we can see that \textbf{SVN is above Git and CVS} regarding \emph{Usability, Funciolidad and Initial Analysis}. These qualities are important as \emph{they are the key for user interaction with the VCS tool} so we have to take into account these results to the overall analysis.
+
+\subsubsection{Documentation}
+
+\par The last group contains only the metric only documentation. Has been relegated to the last place because it has more value to that included in Development. It is important because it contains the manuals and the \emph{results of use and learning}.
+
+\par Analyzing the results remains the general trend, \textbf{Git is in the lead with 0.5 points} while \textbf{SVN and CVS obtained 0.44 and 0.33 points respectively}. \emph{Documentation and help} in Git stands for the quantity and quality, as we might say in \emph{SVN}. The exception appears to \textbf{CVS}, it is not understandable that there is not level with the other two tools, being the oldest of the three, \emph{seems not to have been able to manage the knowledge of the tool}.
 
 \section{Conclusions}
 
@@ -548,7 +607,7 @@ RoR are analysis repository tools. Display information about project communities
 	    \begin{itemize}
             \item Started to participate las year: \textbf{6}
         \end{itemize}
-	    \item Knowledge concentration (territoriality) \textbf{TBC}
+	    \item Knowledge concentration (territoriality): In 2012 year we can assume a territoriality over 80\% with 8538 actions from the total of 10417 in files per one developer, so 81,96\%.
 	    \item Is still the original developer/team active nowadays? Yes, innactive.
 	    \begin{itemize}
             \item How did affect the project ? commits avg continued normal ?
