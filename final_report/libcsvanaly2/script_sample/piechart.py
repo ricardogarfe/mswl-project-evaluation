@@ -19,22 +19,20 @@
 
 
 import matplotlib as mpl
-#this avoid the use of the $DISPLAY value for the charts
-mpl.use('Agg')
+from pylab import *
+
 import matplotlib.pyplot as plt
 
-
-
 # make a square figure and axes
-plt.figure(1, figsize=(6,6))
-ax = plt.axes([0.1, 0.1, 0.8, 0.8])
+figure(1, figsize=(10,10))
+ax = axes([0.1, 0.1, 0.8, 0.8])
 
-labels = 'JavaScript', 'C/C++ Header', 'ActionScript', 'C++', 'C', 'Shell' 
-fracs = [18.97, 14.21, 12.7, 47.69, 4.74, 1.96]
+labels = 'Initial Analysis', 'Functionality', 'Usability', 'Robustness', 'Development', 'Community', 'Documentation' 
+fracs = [13.00, 12.00, 14.00, 17.00, 15.00, 19.00, 10.00]
+explode=(0.05, 0.05, 0.05, 0.1, 0.1, 0.1, 0)
 
-plt.pie(fracs, labels=labels, autopct='%1.1f%%', shadow=False)
+pie(fracs, explode=explode, labels=labels, autopct='%1.1f%%', shadow=True)
 
-plt.title('Number of Files')
+title('Weight defined for each Category', bbox={'facecolor':'0.8', 'pad':5})
 
-plt.savefig("basic_piechart.eps")
-
+savefig("vcs-scm-weight-analysis-piechart.png")
