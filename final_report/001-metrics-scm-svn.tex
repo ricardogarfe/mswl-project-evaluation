@@ -14,17 +14,48 @@
 
 \newpage
 
+\section{foobar: Big picture}
+
+foobar: Is a Software Development Company focussed in web data mining applications and result interpretation.
+
+\par Delevop analysis from social media networks and crawler to convert all the information to a human-readable solution for our clients. As some examples we are expertise in issue trackers visualization chars tools to convert the information into graphic that assist the project manager to make decisions faster and easily with just a look.
+
+\section{Integrate VCS}
+
+We need to implement a forge because our developers are in different physical locations and want intergrar tools for more efficient management.
+We want to integrate tools are:
+
+\begin{itemize}
+    \item Version Control System VCS
+    \item Issue Tracker
+    \item Mail Server
+    \item Continuous Integration Test
+    \item Code Quality Analyzer
+\end{itemize}
+
+In this analysis we will begin the search for a VCS to suit our requirements.
+
+\section{Requirements}
+
+
+
 \section{VCS}
 
 \par \textbf{VCS}: Version Control System. Un Sistema de Control de Versiones es una herramienta para la gesti\'on de los archivos y su ciclo de vida dentro de un proyecto. Gestiona todas las acciones que se realizan sobre ellos, crear, guardar, copiar, borrar, mover. La informaci\'on queda reflejada en una base de datos, creando un hist\'orico y ofreciendo una gesti\'on \'agil de los recursos a los usuarios.
 
 \par Vamos a implantar un Control de Versiones para el trabajo en nuestra empresa de desarrollo de software mediante el an\'alisis de unas m\'etricas establecidas adaptadas a nuestros requerimientos.
 
-\section{Subversion}
+\subsection{Subversion}
 
 \textbf{Subversion}\footnote{http://subversion.tigris.org/}: es un Sistema de Control de Versiones de c\'odigo abierto. Fue creado en el a\~no 2000 por la empresa Collabnet\footnote{http://www.collab.net/} perteneciente a la fundaci\'on Apache.
 
-\par Es el VCS m\'as utilizado en los proyectos relacionados con el desarrollo de proyectos de software libre y proyectos privados.
+\par Es el VCS m\'as utilizado en los proyectos relacionados con el desarrollo de proyectos de software libre\footnote{http://www.ohloh.net/repositories/compare} y proyectos privados.
+
+\subsection{Git}
+
+
+\subsection{CVS}
+
 
 \section{Metrics: Analysis}
 
@@ -100,6 +131,8 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
             \begin{tabular}{|l|l|l|l|l|l|}
                 \hline
         	    Jan (4.5M) & Feb (2.5M) & Mar (3.5M) & Apr (2.1M) & May (1.8M) & Jun (1.8M)\\
+        	    \hline
+        	    - & + & - & - & - & -\\
                 \hline
                 Jul (1.4M) & Aug (3.3M) & Sep (1.9M) & Oct (1.7M) & Nov (1.7M) & Dec (497K)\\
                 \hline
@@ -153,7 +186,7 @@ Hemos definido el peso que se otorga a cada categor\'ia en la siguiente tabla:
     \end{itemize}
 \end{itemize}
 
-\par Con respecto al \emph{Desarrollo} vemos que la puntuaci\'on es buena ya que cuenta con distintas APIs (en varios lenguajes de programaci\'on C y Java) y se utiliza en proyectos externos por lo que es una pr\'actica extendida. Pero claro, has de saber programar para poder entender el API.
+\par Con respecto al \emph{Desarrollo} vemos que la puntuaci\'on es buena ya que cuenta con distintas APIs (en varios lenguajes de programaci\'on C y Java que son los más extendidos\footnote{http://www.ohloh.net/languages/compare?measure=loc\_changed\&percent=true} y demandados\footnote{http://www.tiobe.com/index.php/content/paperinfo/tpci/index.html}) y se utiliza en proyectos externos por lo que es una pr\'actica extendida. Pero claro, has de saber programar para poder entender el API.
 
 \begin{itemize}
     \item Project API in the same web - Client for Java and C.
@@ -272,18 +305,62 @@ Podemos apreciar que el resultado obtenido es una puntuaci\'on de \textbf{4,2 so
 
 \par Ahora falta la comparaci\'on con los otros Sistemas de Control de Versiones aplicando las mismas m\'etricas descritas en el documento. De esta forma podemos obtener unos n\'umeros comparables y elegir el que m\'as de adecue a nuestras necesidades.
 
-\section{Tools}
+\section{Results}
+
+% Todos los resultados en tabla comparativa
+
+\section{Conclusions}
+
+\section{Further work}
+
+Resumen, que posibilidades se han dejado fuera y futuribles.
+% TODO: maillist, bugtracker, standards, foundation, uses, succed.
+
+\section{Analysis Document}
+
+Analysis Document with all punctuations and comparisons between the three VCS could be found in github for dowloading:
+\begin{itemize}
+    \item https://github.com/ricardogarfe/mswl-project-evaluation/blob/master/final\_report/scm-metrics.ods
+\end{itemize}
+
+Here is the full metric list and its punctuation explanation. If you are interested in changing the weights of the metrics, open the file-scm-metrics and access svn.ods Book Category Ranking encuetnra where a summary of the results so you can do a quick scan to your preference among the three VCS elected.
+
+\par You can change the assigned weights according to their requirements, while the total is 100 course, traps are not enabled yet.
+
+\par Feel free to add it believes appropriate VCS has been left out of the analysis. As can be the case of mercury. This way you can get a more complete and robust document so it can be reused by more people.
+
+\section{Toolset}
 
 \par Herramienta: es un instrumento que se utiliza para llevar a cabo un trabajo. En este caso la recolecci\'on de datos y el an\'alisis son el trabajo realizado.
 
 \par Para este an\'alisis se han utilizado varias herramientas para conseguir la informaci\'on necesaria.
 
+\subsection{Data sources}
+
+Data Sources from internet:
+
 \begin{itemize}
-    \item Web de Subversion\footnote{http://subversion.tigris.org/} - Listas de correo, usuarios, repositorio, documentaci\'on, foros.
+    \item Website - http://subversion.apache.org/
+    \item Source code management system - svn co http://svn.apache.org/repos/asf/subversion subversion
+    \item Releases - http://subversion.apache.org/packages.html
+    \item Wikis - http://wiki.apache.org/subversion/
+    \item Documentation - http://subversion.apache.org/docs/
+    \item Mailing lists -http://subversion.apache.org/mailing-lists.html
+    \item Bug tracking system - http://subversion.tigris.org/issue-tracker.html
+    \item Irc channel - IRC on channel \#svn on irc.freenode.net
+\end{itemize}
+
+\subsection{Data mining Applications}
+
+\begin{itemize}
     \item CVSAnaly\footnote{https://github.com/MetricsGrimoire/CVSAnalY} - Herramienta para obtener informaci\'on de un repositorio de c\'odigo. Crea una base de datos con toda la informaci\'on referente al repositorio, usuarios, commits, ficheros.
     \item libcvsanaly2\footnote{http://git.libresoft.es/libcvsanaly2} - Librer\'ia para generar informes a partir de la base de datos creada por CVSAnaly2 con respecto a las acciones sobre los ficheros de un repositorio.
-    \item ohloh\footnote{http://www.ohloh.net/} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
+\end{itemize}
 
+\subsection{Repository of Repositories: RoR}
+
+\begin{itemize}
+    \item ohloh\footnote{http://www.ohloh.net/} - Es un repositorio de repositorios (RoR) donde muestra informaci\'on sobre los proyectos que alberga.
 \end{itemize}
 
 \section{Metrics: Full List}
@@ -430,6 +507,8 @@ Podemos apreciar que el resultado obtenido es una puntuaci\'on de \textbf{4,2 so
                 \begin{tabular}{|l|l|l|l|l|l|}
                     \hline
             	    Jan (4.5M) & Feb (2.5M) & Mar (3.5M) & Apr (2.1M) & May (1.8M) & Jun (1.8M)\\
+            	    \hline
+            	    - & + & - & - & - & -\\
                     \hline
                     Jul (1.4M) & Aug (3.3M) & Sep (1.9M) & Oct (1.7M) & Nov (1.7M) & Dec (497K)\\
                     \hline
