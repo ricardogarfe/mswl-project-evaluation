@@ -27,6 +27,7 @@
 
 # Zipped files
 *.7z
+*.gz
 
 # Texlipse
 .project
