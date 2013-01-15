@@ -1,0 +1,221 @@
+diff --git a/.gitignore b/.gitignore
+index 9b63d08..0350d49 100644
+--- a/.gitignore
++++ b/.gitignore
+@@ -11,3 +11,7 @@
+ *.pc
+ missing
+ py-compile
++/.project
++/.pydevproject
++/activity.png
++/top-committers.png
+diff --git a/scripts/activity.py b/scripts/activity.py
+index 65889c6..9f226f4 100644
+--- a/scripts/activity.py
++++ b/scripts/activity.py
+@@ -36,7 +36,12 @@
+         'baseColor': '#ffffff',
+         'lineColor': '#444444'
+     },
+-    'colorScheme': 'blue',
++    'colorScheme': {
++            'name': 'gradient',
++            'args': {
++                'initialColor': 'red',
++            },
++        },
+     'legend': {
+         'hide': True,
+     },
+diff --git a/scripts/commits-types.py b/scripts/commits-types.py
+index f2c8b99..19fbc71 100644
+--- a/scripts/commits-types.py
++++ b/scripts/commits-types.py
+@@ -23,7 +23,11 @@
+             'ticks': [dict(v=i, label=d[0]) for i, d in enumerate (data)]
+         }
+     },
+-    'colorScheme': 'blue',
++    'colorScheme': {
++            'args': {
++                'initialColor': 'blue',
++            },
++        },
+     'background': {
+         'baseColor': '#ffffff'
+     },
+diff --git a/scripts/fm3.py b/scripts/fm3.py
+index e31c11f..00c65a0 100644
+--- a/scripts/fm3.py
++++ b/scripts/fm3.py
+@@ -4,13 +4,16 @@
+ from storm.locals import *
+ from libcvsanaly2.Database import *
+ from libcvsanaly2.Graphs.PychaGraph import PychaGraph
+-from libcvsanaly2.Exporter import Exporter
+ 
+ class Report:
+ 
+     # General options for graphs
+     options = {
+-        'colorScheme': '#4a6dbc',
++        'colorScheme': {
++                'args': {
++                    'initialColor': 'blue',
++                },
++            },
+         'background': {
+             'chartColor': '#ffeeff',
+             'baseColor': '#ffffff',
+@@ -120,7 +123,7 @@
+         out_store.commit ()
+ 
+     def __fill_committers_in_time (self, in_store, out_store):
+-        query = "select " + format_date (driver, "%Y", "date") + " year, count(distinct committer) " + \
++        query = "select " + format_date (driver, "%Y", "date") + " year, count(distinct committer_id) " + \
+                 "from scmlog group by year"
+         result = in_store.execute (query)
+         for year, n_committers in result:
+@@ -132,8 +135,8 @@
+         out_store.commit ()
+ 
+     def __fill_new_committers_in_time (self, in_store, out_store):
+-        query = "select " + format_date (driver, "%Y", "t.md") + " year, count(t.committer) " + \
+-                "from (select committer, min(date) md from scmlog group by committer) t " + \
++        query = "select " + format_date (driver, "%Y", "t.md") + " year, count(t.committer_id) " + \
++                "from (select committer_id, min(date) md from scmlog group by committer_id) t " + \
+                 "group by year"
+         result = in_store.execute (query)
+         data = [(year, n_committers) for (year, n_committers) in result]
+@@ -146,7 +149,7 @@
+         out_store.commit ()
+ 
+     def __fill_commits_types (self, in_store, out_store):
+-        query = "select ft.type, count(a.id) from actions a, file_types ft " + \
++        query = "select ft.type, count(a.id) from actions a, actions_file_names ft " + \
+                 "where a.file_id = ft.file_id group by ft.type"
+         result = in_store.execute (query)
+         for type, n_commits in result:
+diff --git a/scripts/generations.py b/scripts/generations.py
+index a446d15..5bd6070 100644
+--- a/scripts/generations.py
++++ b/scripts/generations.py
+@@ -1,11 +1,12 @@
+ import os
+ import sys
+-import Numeric
++import numpy
+ import string
+ import subprocess
+ from storm.locals import *
+ from libcvsanaly2.FindProgram import find_program
+ from libcvsanaly2.Database import *
++import signal
+ 
+ 
+ """
+@@ -57,8 +58,8 @@
+     #  The use of firstDate is for normalizing (first period will be 0)
+     queryCreateTemplate = string.Template ("""
+     select year(s.date)*4+quarter(s.date)-year("$firstDate")*4-quarter("$firstDate") period, s.committer_id, count(distinct(s.id))
+-    from scmlog s, actions a, file_types ft 
+-    where a.commit_id = s.id and a.file_id = ft.file_id and ft.type in ('unknown', 'code') 
++    from scmlog s, actions a, actions_file_names ft 
++    where a.commit_id = s.id and a.file_id = ft.file_id 
+     group by period, s.committer_id
+     order by period, count(s.date) desc;
+     """)
+@@ -83,8 +84,8 @@
+     #  days is the number of days for each period
+     queryCreateTemplateDays = string.Template ("""
+     select (to_days(s.date) - to_days("$firstDate")) div $days period, s.committer_id, count(distinct(s.id))
+-    from scmlog s, actions a, file_types ft
+-    where a.commit_id = s.id and a.file_id = ft.file_id and ft.type in ('unknown', 'code')
++    from scmlog s, actions a, actions_file_names ft
++    where a.commit_id = s.id and a.file_id = ft.file_id 
+     group by period, s.committer_id
+     order by period, count(s.date) desc;
+     """)
+@@ -111,8 +112,8 @@
+     #  days is the number of days for each period
+     queryCreateTemplateSlots = string.Template ("""
+     select (to_days(s.date) - to_days("$firstDate")) div ((to_days("$lastDate") - to_days("$firstDate")) div $slots) period, s.committer_id, count(distinct(s.id))
+-    from scmlog s, actions a, file_types ft
+-    where a.commit_id = s.id and a.file_id = ft.file_id and ft.type in ('unknown', 'code')
++    from scmlog s, actions a, actions_file_names ft
++    where a.commit_id = s.id and a.file_id = ft.file_id 
+     group by period, s.committer_id
+     order by period, count(s.date) desc;
+     """)
+@@ -258,7 +259,7 @@
+         file = self.dirname + '/' + 'matrix_top_commiters'
+ 
+         matrixSize = self.lastPeriod + 1
+-        matrixPeriods = Numeric.zeros((matrixSize,matrixSize))
++        matrixPeriods = numpy.zeros((matrixSize,matrixSize))
+         currentPeriod = - 1
+         for row in self.periodCommitsCommiter:
+             # 0:period, 1:commiter, 2:commits
+@@ -290,7 +291,7 @@
+                str (fraction)
+ 
+         matrixSize = self.lastPeriod + 1
+-        matrixPeriods = Numeric.zeros((matrixSize,matrixSize))
++        matrixPeriods = numpy.zeros((matrixSize,matrixSize))
+         currentPeriod = - 1
+         for row in self.periodCommitsCommiter:
+             # 0:period, 1:commiter, 2:commits
+@@ -328,7 +329,7 @@
+                str (fraction)
+ 
+         matrixSize = self.lastPeriod + 1
+-        matrixPeriods = Numeric.zeros((matrixSize,matrixSize))
++        matrixPeriods = numpy.zeros((matrixSize,matrixSize))
+         currentPeriod = - 1
+         for row in self.periodCommitsCommiter:
+             # 0:period, 1:commiter, 2:commits
+diff --git a/scripts/ltools.py b/scripts/ltools.py
+index e2bc740..ae0a8f6 100644
+--- a/scripts/ltools.py
++++ b/scripts/ltools.py
+@@ -13,7 +13,11 @@
+ 
+ # General options for graphs
+ global_options = {
+-    'colorScheme': '#4a6dbc',
++    'colorScheme': {
++            'args': {
++                'initialColor': 'blue',
++            },
++        },
+     'background': {
+         'chartColor': '#ffeeff',
+         'baseColor': '#ffffff',
+diff --git a/scripts/tops.py b/scripts/tops.py
+index 1aca1b3..1b13127 100644
+--- a/scripts/tops.py
++++ b/scripts/tops.py
+@@ -12,7 +12,12 @@
+ 
+ gfx = PychaGraph (PychaGraph.HORIZONTAL_BAR)
+ options = {
+-    'colorScheme': 'red',
++    'colorScheme': {
++            'name': 'gradient',
++            'args': {
++                'initialColor': 'red',
++            },
++        },
+     'background': {
+         'chartColor': '#ffeeff',
+         'baseColor': '#ffffff',
+@@ -37,7 +42,7 @@
+         
+ # Top committers
+ query = "select p.name, count(s.id) from scmlog s, people p " + \
+-        "where p.id = s.committer group by p.name order by 2 desc"
++        "where p.id = s.committer_id group by p.name order by 2 desc"
+ result = store.execute (query)
+ data = [item for item in result]
+ dataset = (("committers", [(i, l[1]) for i, l in enumerate (data)]),)
