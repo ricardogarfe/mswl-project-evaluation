@@ -132,7 +132,7 @@ After analyzing the requirements and scoring metrics, we proceed to give a weigh
 
 \begin{figure}[H]
 \begin{center}
-  \includegraphics[width=0.8\textwidth]{libcsvanaly2/script_sample/vcs-scm-weight-analysis-piechart.png}
+  \includegraphics[width=0.8\textwidth]{libcsvanaly2/generations/metrics-piechart.png}
   \caption{Weight defined for each Category}
   \label{fig:weight-metrics}
 \end{center}
@@ -196,7 +196,7 @@ We defined the weight given to each category in figure~\ref{fig:weight-metrics}.
 
             \begin{figure}[H]
             \begin{center}
-              \includegraphics[width=0.9\textwidth]{libcsvanaly2/graphs.complete.svn/new-committers-year.png}
+              \includegraphics[width=0.9\textwidth]{libcsvanaly2/graphs/graphs.complete.svn/new-committers-year.png}
               \caption{New committers per year.}
               \label{fig:2012-new-commmitters}
             \end{center}
@@ -379,7 +379,7 @@ We can see that the result is a score of \textbf{4.29 out of 5}. This result is 
 
 \section{Compare Results}
 
-In the table below we can see a comparison of the results obtained from the analysis of the three possible solutions, \emph{SVN}, \emph{Git} and \emph{CVS} using \emph{Unweighted Rating (UR)} and \emph{Weighted Rating (WR)}:
+\par In the table below we can see a comparison of the results obtained from the analysis of the three possible solutions, \emph{SVN}, \emph{Git} and \emph{CVS} using \emph{Unweighted Rating (UR)} and \emph{Weighted Rating (WR)}:
 
 \begin{tabular}{|l|l|l|l|l|l|l|l|}
     \hline
@@ -405,12 +405,30 @@ In the table below we can see a comparison of the results obtained from the anal
     \hline
 \end{tabular}
 
+\par You get a better view of the result to convert numbers of key metrics in the table above to the graph in figure~\ref{fig:metric-result}.
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=1\textwidth]{libcsvanaly2/generations/metrics-vertical-chart.png}
+  \caption{Main results from VCS metrics}
+  \label{fig:metric-result}
+\end{center}
+\end{figure}
+
 \par At first glance it is seen that in the overall score \textbf{85.87 points} against \textbf{SVN} with minimal difference \textbf{Git 84.95}. CVS is relegated to a distant third with respect to both with 66.4 points.
 At first glance it is seen that in the overall score \textbf{stands SVN}. \emph{SVN} gets a score of \textbf{85.87 points} with a minimum difference with \emph{Git}. \emph{Git} gets a score of \textbf{84.95 points}. \emph{CVS} is relegated to a distant third with respect to both with \textbf{66.4 points}.
 
 \par For further analysis, we divided the analysis in the same groups previously selected by the representation of requirements through the weights.
 
-\par Although at first glance it seems that will fight to the death between SVN and Git.
+\par Although at first glance it seems that will fight to the death between SVN and Git as we can see in weighter final results per metric in figure~\ref{fig:metric-weight-result}:
+
+\begin{figure}[H]
+\begin{center}
+  \includegraphics[width=1\textwidth]{libcsvanaly2/generations/metrics-weight-vertical-chart.png}
+  \caption{Weighted results from VCS metrics.}
+  \label{fig:metric-weight-result}
+\end{center}
+\end{figure}
 
 \subsection{Community, Robustness and Development}\label{sec:compare-com-rob-dev}
 
