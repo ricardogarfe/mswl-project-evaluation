@@ -75,8 +75,7 @@ final_report/
 
 images: Images used for final report and beamer.
 libcsvanaly2: Graphs rendered using libcvsanaly2.
-metrics_results: ods files form git and cvs analysis.
-scm-metrics.sxc: SVN Analysis for final report
+metrics_results: ods files form git and cvs analysis where is scm-metrics.sxc file. In this file you can see all raw results about scm analysis between SVN, Git and CVS.
 
 In libcsvanaly2/ you can find, graphs, scripts from SCM analysis about; committers, commits, file actions and comparisons between the result score.
 
