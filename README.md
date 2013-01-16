@@ -22,7 +22,7 @@ Documents Index
 ================
 
 Main directory
-
+```
 ├── bbdd/
 ├── bbdd-pedro/
 ├── libcvsanalypatch/
@@ -36,6 +36,7 @@ Main directory
 ├── mswl-project-evaluation.tex
 ├── README.md
 └── scm-metrics.ods
+```
 
 000-queries.txt: Queries for generated database using CVSAnaly.
 
@@ -54,7 +55,7 @@ Final Report
 The most important file is 001-metrics-scm-svn.tex, final report: analysis bewteen tree scm; svn, git and cvs. Must read :) after compiling using LaTeX, of course.
 
 Directory structure.
-
+```
 final_report/
 ├── images/
 ├── libcsvanaly2/
@@ -70,6 +71,7 @@ final_report/
 ├── scm-metrics.sxc
 ├── scm_svn.R
 └── Verzani-SimpleR.pdf
+```
 
 images: Images used for final report and beamer.
 libcsvanaly2: Graphs rendered using libcvsanaly2.
@@ -82,11 +84,12 @@ Libcvsanaly2 patches
 ---------------------
 
 In this directory I have patches to run scripts from [libcvsanaly2 tool](http://git.libresoft.es/libcvsanaly2) using [CVSAnaly Data](https://github.com/MetricsGrimoire/CVSAnalY) from source code management tools (VCS) to extract data from commits.
-
+```
 libcvsanalypatch/
 ├── libcvsanaly2_color_scheme.patch
 ├── libcvsanaly2_fm3.patch
 └── libcvsanaly2-full.patch
+```
 
 Apply *libcvsanaly2-full.patch* to project and run the scripts with database parameters. Sample to run generations script:
 
