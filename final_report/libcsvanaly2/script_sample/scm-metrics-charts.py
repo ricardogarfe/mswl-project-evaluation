@@ -26,7 +26,13 @@ def optionsAndMetrics():
     metric_list = ('Initial Analysis', 'Functionality', 'Usability', 'Robustness', 'Development', 'Community', 'Documentation')
 
     options = {
-        'legend': {'hide': False},
+        'legend': {
+            'hide': False,
+            'position': {
+                'top': 20,
+                'left': 80,
+            },
+        },
         'colorScheme': {
             'name': 'gradient',
             'args': {
@@ -101,6 +107,8 @@ def renderTotalsGraph():
 
     options = optionsAndMetrics()
 
+    options['axis']['x']['ticks'] = [dict(v=0, label='Totals')]
+
     verticalChart('metrics-total-over100-chart.png', scm_over_100, options)
 
 
@@ -157,5 +165,5 @@ if __name__ == '__main__':
     else:
         output = 'metrics-linechart.png'
 
-    renderMetricsWeight()
+    renderTotalsGraph()
 
