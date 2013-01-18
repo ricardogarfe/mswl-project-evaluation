@@ -44,7 +44,7 @@ Main directory
 Final Report
 -------------
 
-The most important file is 001-metrics-scm-svn.tex, final report: analysis bewteen tree scm; svn, git and cvs. Must read :) after compiling using LaTeX, of course.
+The most important file is 001-metrics-scm-svn.tex, final report: analysis between tree scm; svn, git and cvs. Must read :) after compiling using LaTeX, of course.
 
 *final_report* directory contains final report resources, documents and presentation:
 
