@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Mswl-project-evaluation : Repository for Projects Evaluation Subject - Master de Software Libre - URJC Madrid." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Mswl-project-evaluation</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/ricardogarfe/mswl-project-evaluation">View on GitHub</a>
+
+          <h1 id="project_title">Mswl-project-evaluation</h1>
+          <h2 id="project_tagline">Repository for Projects Evaluation Subject - Master de Software Libre - URJC Madrid.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/ricardogarfe/mswl-project-evaluation/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/ricardogarfe/mswl-project-evaluation/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>MWSL Project Evaluation</h1>
+
+<h1>Introduction</h1>
+
+<p>Notes and Exercises for Project Evaluation Subject coursed in <a href="http://master.libresoft.es/">Master on Libre Software (Master Universitario en Software libre</a> at <a href="http://www.urjc.es/">Universidad Rey juan Carlos</a>.</p>
+
+<h1>Requirements</h1>
+
+<ul>
+<li>LaTeX: to compile source code documentation files.</li>
+</ul><h1>Documents Index</h1>
+
+<p>Main directory contains notes and exercises from the subject:</p>
+
+<ul>
+<li>000-queries.txt: <code>Queries for generated database using CVSAnaly.</code>
+</li>
+<li>001-floss-projects-evaluation.tex: <code>Describe 5 Mail client requirements</code>
+</li>
+<li>001-metrics-analysis.tex: <code>Source Code Management</code> first metrics analysis and datasources.</li>
+<li>002-floss-projects-evaluation.tex: <code>Introduction to Quality in Libre Software</code>: Qualos and OpenBRR.</li>
+<li>003-qualoss.tex: <code>QuaLOSS; Quality of Libre Open Source Software</code>
+</li>
+<li>final_model.txt: <code>Final model metrics values</code>.</li>
+</ul><p>Main directory</p>
+
+<pre><code>├── bbdd/
+├── bbdd-pedro/
+├── libcvsanalypatch/
+├── final_report/
+├── 000-queries.txt
+├── 001-floss-projects-evaluation.tex
+├── 001-metrics-analysis.tex
+├── 002-floss-projects-evaluation.tex
+├── 003-qualoss.tex
+├── final_model.txt
+├── mswl-project-evaluation.tex
+├── README.md
+└── scm-metrics.ods
+</code></pre>
+
+<h2>Final Report</h2>
+
+<p>The most important file is 001-metrics-scm-svn.tex, final report: analysis between tree scm; svn, git and cvs. Must read :) after compiling using LaTeX, of course.</p>
+
+<p><em>final_report</em> directory contains final report resources, documents and presentation:</p>
+
+<ul>
+<li>001-metrics-scm-svn.tex: Metric analysis for choose VCS between SVN, Git and CVS.</li>
+<li>001-beamer-metrics-scm-svn.tex: Presentation for the first part of the analysis, focused on SVN.</li>
+<li>scm-metrics.sxc: SXC file with all information related to SVN, Git and CVS based on created metrics to analyse these VCS.</li>
+<li>metrics_results: Metrics Documents from other CVS: CVS and Git.</li>
+<li>libcsvanaly2: charts and data generated with libcsvanaly2 tool. You can find, graphs, scripts from SCM analysis about; committers, commits, file actions and comparisons between the result score.</li>
+<li>images: Images used for final report and beamer.</li>
+<li>libcsvanaly2: Graphs rendered using libcvsanaly2.</li>
+<li>metrics_results: ods files form git and cvs analysis where is scm-metrics.sxc file. In this file you can see all raw results about scm analysis between SVN, Git and CVS.</li>
+</ul><p>Directory structure.</p>
+
+<pre><code>final_report/
+├── images/
+├── libcsvanaly2/
+├── metrics_results/
+├── 001-beamer-metrics-scm-svn.tex
+├── 001-metrics-scm-svn.tex
+├── 002-todo-final-report.rst
+├── barplot_svn_2000.jpg
+├── barplot_svn.jpg
+├── metrics-scm-svn.lyx
+├── scm_commiters.py
+├── scm-metrics.ods
+├── scm-metrics.sxc
+├── scm_svn.R
+└── Verzani-SimpleR.pdf
+</code></pre>
+
+<h2>Libcvsanaly2 patches</h2>
+
+<p>In this directory I have patches to run scripts from <a href="http://git.libresoft.es/libcvsanaly2">libcvsanaly2 tool</a> using <a href="https://github.com/MetricsGrimoire/CVSAnalY">CVSAnaly Data</a> from source code management tools (VCS) to extract data from commits.</p>
+
+<pre><code>libcvsanalypatch/
+├── libcvsanaly2_color_scheme.patch
+├── libcvsanaly2_fm3.patch
+└── libcvsanaly2-full.patch
+</code></pre>
+
+<p>Apply <em>libcvsanaly2-full.patch</em> to project and run the scripts with database parameters. Sample to run generations script:</p>
+
+<pre><code>python generations.py --db-output-user root --db-output-password admin --db-output-hostname localhost --db-output-database scm_svn_complete --db-driver mysql --db-user root --db-password admin --db-hostname localhost --db-database scm_svn_complete --db-driver mysql
+</code></pre>
+
+<h1>License</h1>
+
+<p><a href="http://creativecommons.org/licenses/by/3.0/" rel="Creative Commons Attribution 3.0"><img src="http://i.creativecommons.org/l/by/3.0/88x31.png" alt="Foo"></a></p>
+
+<p>This work is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported License</a>.</p>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Mswl-project-evaluation maintained by <a href="https://github.com/ricardogarfe">ricardogarfe</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
