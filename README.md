@@ -91,6 +91,10 @@ Apply *libcvsanaly2-full.patch* to project and run the scripts with database par
 
     python generations.py --db-output-user root --db-output-password admin --db-output-hostname localhost --db-output-database scm_svn_complete --db-driver mysql --db-user root --db-password admin --db-hostname localhost --db-database scm_svn_complete --db-driver mysql
 
+Generate plots based on top committers generations during slots of time in the project:
+
+![All time Top Committers](https://github.com/ricardogarfe/mswl-project-evaluation/blob/master/final_report/libcsvanaly2/generations/matrix-top-fraction-commiters-1-0-normal.png?raw=true)
+
 License
 ========
 
